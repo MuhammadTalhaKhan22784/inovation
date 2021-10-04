@@ -2734,6 +2734,12 @@ p {
   .nav-pills .nav-link {
     font-size: 1rem;
   }
+  .faq_footer_body_content_title p {
+    font-size: 16px;
+  }
+  .faq_footer_body_content_list a {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 393px) {
