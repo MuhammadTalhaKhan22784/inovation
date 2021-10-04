@@ -1,23 +1,3 @@
-// Gears transition JS
-
-const el = document.querySelector(".vsb_4img1");
-
-el.addEventListener("transitionrun", function () {
-  // message.textContent = 'transitionrun fired';
-});
-
-el.addEventListener("transitionstart", function () {
-  // message.textContent = 'transitionstart fired';
-});
-
-el.addEventListener("transitioncancel", function () {
-  // message.textContent = 'transitioncancel fired';
-});
-
-el.addEventListener("transitionend", function () {
-  // message.textContent = 'transitionend fired';
-});
-
 // Testinomial JS
 
 // vars
@@ -128,81 +108,37 @@ window.onload = function () {
     }
   });
 };
-// Togglk navebar
+// Toggle navebar
 
 let nav_menu = document.getElementById("nav_menu");
 let open_menu = document.getElementById("open_menu");
 let close_menu = document.getElementById("close_menu");
 
+// open navbar menu
 function openNavbar() {
   nav_menu.style.marginTop = "0";
   close_menu.style.display = "block";
   open_menu.style.display = "none";
 }
-
+// close navbar menu
 function closeNavbar() {
   nav_menu.style.marginTop = "-1200px";
   close_menu.style.display = "none";
   open_menu.style.display = "block";
 }
 
-// for background color of navbar and footer
-
-let navBar = document.getElementById("navbar");
-let fooTer = document.getElementById("footer");
-let redBtn = document.getElementById("red");
-let greenBtn = document.getElementById("green");
-let blueBtn = document.getElementById("blue");
-
-const handleNavColor = (e) => {
-  console.log("run", e.name);
-  if (e.name === "red") {
-    navBar.style.backgroundColor = "#e85d77e8";
-    fooTer.style.backgroundColor = "#e85d77e8";
-    redBtn.classList.add("active-state3");
-    blueBtn.classList.remove("active-state1");
-    greenBtn.classList.remove("active-state2");
-  } else if (e.name === "green") {
-    navBar.style.backgroundColor = "#0f151fcc";
-    fooTer.style.backgroundColor = "#0f151fcc";
-    greenBtn.classList.add("active-state2");
-    redBtn.classList.remove("active-state3");
-    blueBtn.classList.remove("active-state1");
-  } else if (e.name === "blue") {
-    navBar.style.backgroundColor = "rgb(21 55 108 / 89%)";
-    fooTer.style.backgroundColor = "rgb(21 55 108 / 89%)";
-    blueBtn.classList.add("active-state1");
-    greenBtn.classList.remove("active-state2");
-    redBtn.classList.remove("active-state3");
-  }
-};
-handleNavColor("blue");
-
-// language
+// Change language
 
 const nav_id = document.getElementById("navbar");
 const footer = document.getElementById("footer");
 const pillsTab = document.getElementById("pills-tab");
 const buttonTop = document.getElementById("buttonTop");
-// const languageValue = document.getElementById("dropdownMenuButton1");
-// const hash1 = document.getElementById("hash1");
-// const hash2 = document.getElementById("hash2");
-// const hash3 = document.getElementById("hash3");
-// const hash4 = document.getElementById("hash4");
-// const hash5 = document.getElementById("hash5");
-// const hash6 = document.getElementById("hash6");
-// const hash7 = document.getElementById("hash7");
-// const hash8 = document.getElementById("hash8");
-// const hash9 = document.getElementById("hash9");
-// const hash10 = document.getElementById("hash10");
-// const hash11 = document.getElementById("hash11");
+
 const ele = document.querySelectorAll(".dp");
 const rotate_arrow = document.querySelectorAll(".rotate");
-// const gear = document.querySelectorAll(".gear");
 const gear2 = document.getElementById("g2");
 const gear3 = document.getElementById("g3");
 
-// const color = document.getElementById("color");
 const n1 = document.getElementById("n1");
 const n2 = document.getElementById("n2");
 const n3 = document.getElementById("n3");
@@ -279,7 +215,6 @@ const ft3_5 = document.getElementById("ft3_5");
 const news_letter = document.getElementById("news_letter");
 const n_update = document.getElementById("n_update");
 const subs = document.getElementById("subs");
-// const rights = document.getElementById("rights");
 
 const exp1 = document.getElementById("expchallange");
 const exp2 = document.getElementById("expinovation");
@@ -316,9 +251,6 @@ function HandleLanguage(e) {
       ele[i].classList.add("test2");
     }
 
-    // for (let i = 0; i < gear.length; i++) {
-    //   gear[i].style.direction = "rtl";
-    // }
     pillsTab.style.direction = "rtl";
 
     gear2.style.marginRight = "63px";
@@ -335,8 +267,7 @@ function HandleLanguage(e) {
     exp1.style.flexDirection = "row-reverse";
     exp2.style.justifyContent = "flex-end";
     exp2.style.flexDirection = "row-reverse";
-    // color.innerHTML = "اللون";
-    // color.style.textAlign = "right";
+
     n1.style.textAlign = "right";
     n1.innerHTML = "القائمة الرئيسية";
     n1.style.fontSize = "0.8rem";
@@ -454,7 +385,6 @@ function HandleLanguage(e) {
     h2.innerHTML =
       "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
     h2.style.fontFamily = "DroidArabicKufiRegular";
-    // h2.style.fontWeight="normal"
     ft_1.innerHTML = "نبذة عنا";
     ft_2.innerHTML = "نبدة عن واحات اإلبتكار";
     ft_3.innerHTML = "خدماتنا";
@@ -477,7 +407,6 @@ function HandleLanguage(e) {
     ft3_3.innerHTML = "السابقة";
     ft3_4.innerHTML = "هاكثون";
     ft3_5.innerHTML = "المسابقات";
-    // ft3_6.innerHTM = "إستبيانات";
 
     news_letter.innerHTML = "اشترك في نشرتنا اإلخبارية";
     n_update.innerHTML = "ابق على اطالع بأحدث األخبار والفعاليات والمزيد";
@@ -495,17 +424,11 @@ function HandleLanguage(e) {
       rotate_arrow[i].style.transform = "rotate(-180deg)";
     }
   } else {
-    // languageValue.innerHTML = "English";
     engLng.classList.add("d-none");
     arabicLng.classList.remove("d-none");
 
-    // for (let i = 0; i < gear.length; i++) {
-    //   gear[i].style.direction = "ltr";
-    // }
-
     for (let i = 0; i < h_arrow.length; i++) {
       h_arrow[i].style.marginLeft = "-17px";
-      // h_arrow[i].style.marginRight = "0";
     }
 
     for (let i = 0; i < nav_item.length; i++) {
@@ -516,8 +439,6 @@ function HandleLanguage(e) {
       rotate_arrow[i].style.transform = "rotate(0deg)";
     }
 
-    // color.innerHTML = "Color";
-    // color.style.textAlign = "left";
     n1.style.textAlign = "left";
     n2.style.textAlign = "left";
     n3.style.textAlign = "left";
@@ -624,11 +545,6 @@ function HandleLanguage(e) {
     d4_3.innerHTML = "Find top startups";
     d4_4.innerHTML = "Request talents";
 
-    // d4_1.innerHTML = "News";
-    // d4_2.innerHTML = "Upcoming event";
-    // d4_3.innerHTML = "Past event";
-    // d4_4.innerHTML = "Customized Events Contact Us Directly";
-
     d5_1.style.textAlign = "left";
     d5_2.style.textAlign = "left";
     d5_3.style.textAlign = "left";
@@ -686,6 +602,7 @@ function HandleLanguage(e) {
 }
 HandleLanguage(getLang);
 
+// Top Button JS
 var btn = $("#buttonTop");
 
 $(window).scroll(function () {
@@ -701,6 +618,7 @@ btn.on("click", function (e) {
   $("html, body").animate({ scrollTop: 0 }, "300");
 });
 
+// Toggle Dropdown JS
 let navItemToggle = document.querySelectorAll(".nav-item");
 let nav_link = document.querySelectorAll(".dropdown-menu");
 
@@ -719,14 +637,10 @@ navItemToggle.forEach((item, i) => {
     if (yes) {
       //   console.log(nav_link[i].parentNode.classList);
       nav_link[i].classList.remove("d-block");
-      //  for ( nav_link[i] = 0; nav_link[i] < h_arrow.length; i++) {
       h_arrow[i].style.transform = "rotate(0deg)";
-      //   }
     } else {
       nav_link[i].classList.add("d-block");
-      //   for ( i = 0; i < h_arrow.length; i++) {
       h_arrow[i].style.transform = "rotate(-180deg)";
-      //   }
     }
   });
 });
