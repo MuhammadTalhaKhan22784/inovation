@@ -2,20 +2,20 @@
 
 const el = document.querySelector(".vsb_4img1");
 
-el.addEventListener("transitionrun", function() {
-    // message.textContent = 'transitionrun fired';
+el.addEventListener("transitionrun", function () {
+  // message.textContent = 'transitionrun fired';
 });
 
-el.addEventListener("transitionstart", function() {
-    // message.textContent = 'transitionstart fired';
+el.addEventListener("transitionstart", function () {
+  // message.textContent = 'transitionstart fired';
 });
 
-el.addEventListener("transitioncancel", function() {
-    // message.textContent = 'transitioncancel fired';
+el.addEventListener("transitioncancel", function () {
+  // message.textContent = 'transitioncancel fired';
 });
 
-el.addEventListener("transitionend", function() {
-    // message.textContent = 'transitionend fired';
+el.addEventListener("transitionend", function () {
+  // message.textContent = 'transitionend fired';
 });
 
 // Testinomial JS
@@ -23,110 +23,110 @@ el.addEventListener("transitionend", function() {
 // vars
 ("use strict");
 var testim = document.getElementById("testim"),
-    testimDots = Array.prototype.slice.call(
-        document.getElementById("testim-dots").children
-    ),
-    testimContent = Array.prototype.slice.call(
-        document.getElementById("testim-content").children
-    ),
-    testimLeftArrow = document.getElementById("left-arrow"),
-    testimRightArrow = document.getElementById("right-arrow"),
-    testimSpeed = 4500,
-    currentSlide = 0,
-    currentActive = 0,
-    testimTimer,
-    touchStartPos,
-    touchEndPos,
-    touchPosDiff,
-    ignoreTouch = 30;
-window.onload = function() {
-    // Testim Script
-    function playSlide(slide) {
-        for (var k = 0; k < testimDots.length; k++) {
-            testimContent[k].classList.remove("active");
-            testimContent[k].classList.remove("inactive");
-            testimDots[k].classList.remove("active");
-        }
-
-        if (slide < 0) {
-            slide = currentSlide = testimContent.length - 1;
-        }
-
-        if (slide > testimContent.length - 1) {
-            slide = currentSlide = 0;
-        }
-
-        if (currentActive != currentSlide) {
-            testimContent[currentActive].classList.add("inactive");
-        }
-        testimContent[slide].classList.add("active");
-        testimDots[slide].classList.add("active");
-
-        currentActive = currentSlide;
-
-        clearTimeout(testimTimer);
-        testimTimer = setTimeout(function() {
-            playSlide((currentSlide += 1));
-        }, testimSpeed);
+  testimDots = Array.prototype.slice.call(
+    document.getElementById("testim-dots").children
+  ),
+  testimContent = Array.prototype.slice.call(
+    document.getElementById("testim-content").children
+  ),
+  testimLeftArrow = document.getElementById("left-arrow"),
+  testimRightArrow = document.getElementById("right-arrow"),
+  testimSpeed = 4500,
+  currentSlide = 0,
+  currentActive = 0,
+  testimTimer,
+  touchStartPos,
+  touchEndPos,
+  touchPosDiff,
+  ignoreTouch = 30;
+window.onload = function () {
+  // Testim Script
+  function playSlide(slide) {
+    for (var k = 0; k < testimDots.length; k++) {
+      testimContent[k].classList.remove("active");
+      testimContent[k].classList.remove("inactive");
+      testimDots[k].classList.remove("active");
     }
 
-    testimLeftArrow.addEventListener("click", function() {
-        playSlide((currentSlide -= 1));
-    });
-
-    testimRightArrow.addEventListener("click", function() {
-        playSlide((currentSlide += 1));
-    });
-
-    for (var l = 0; l < testimDots.length; l++) {
-        testimDots[l].addEventListener("click", function() {
-            playSlide((currentSlide = testimDots.indexOf(this)));
-        });
+    if (slide < 0) {
+      slide = currentSlide = testimContent.length - 1;
     }
 
-    playSlide(currentSlide);
+    if (slide > testimContent.length - 1) {
+      slide = currentSlide = 0;
+    }
 
-    // keyboard shortcuts
-    document.addEventListener("keyup", function(e) {
-        switch (e.keyCode) {
-            case 37:
-                testimLeftArrow.click();
-                break;
+    if (currentActive != currentSlide) {
+      testimContent[currentActive].classList.add("inactive");
+    }
+    testimContent[slide].classList.add("active");
+    testimDots[slide].classList.add("active");
 
-            case 39:
-                testimRightArrow.click();
-                break;
+    currentActive = currentSlide;
 
-            case 39:
-                testimRightArrow.click();
-                break;
+    clearTimeout(testimTimer);
+    testimTimer = setTimeout(function () {
+      playSlide((currentSlide += 1));
+    }, testimSpeed);
+  }
 
-            default:
-                break;
-        }
+  testimLeftArrow.addEventListener("click", function () {
+    playSlide((currentSlide -= 1));
+  });
+
+  testimRightArrow.addEventListener("click", function () {
+    playSlide((currentSlide += 1));
+  });
+
+  for (var l = 0; l < testimDots.length; l++) {
+    testimDots[l].addEventListener("click", function () {
+      playSlide((currentSlide = testimDots.indexOf(this)));
     });
+  }
 
-    testim.addEventListener("touchstart", function(e) {
-        touchStartPos = e.changedTouches[0].clientX;
-    });
+  playSlide(currentSlide);
 
-    testim.addEventListener("touchend", function(e) {
-        touchEndPos = e.changedTouches[0].clientX;
+  // keyboard shortcuts
+  document.addEventListener("keyup", function (e) {
+    switch (e.keyCode) {
+      case 37:
+        testimLeftArrow.click();
+        break;
 
-        touchPosDiff = touchStartPos - touchEndPos;
+      case 39:
+        testimRightArrow.click();
+        break;
 
-        console.log(touchPosDiff);
-        console.log(touchStartPos);
-        console.log(touchEndPos);
+      case 39:
+        testimRightArrow.click();
+        break;
 
-        if (touchPosDiff > 0 + ignoreTouch) {
-            testimLeftArrow.click();
-        } else if (touchPosDiff < 0 - ignoreTouch) {
-            testimRightArrow.click();
-        } else {
-            return;
-        }
-    });
+      default:
+        break;
+    }
+  });
+
+  testim.addEventListener("touchstart", function (e) {
+    touchStartPos = e.changedTouches[0].clientX;
+  });
+
+  testim.addEventListener("touchend", function (e) {
+    touchEndPos = e.changedTouches[0].clientX;
+
+    touchPosDiff = touchStartPos - touchEndPos;
+
+    console.log(touchPosDiff);
+    console.log(touchStartPos);
+    console.log(touchEndPos);
+
+    if (touchPosDiff > 0 + ignoreTouch) {
+      testimLeftArrow.click();
+    } else if (touchPosDiff < 0 - ignoreTouch) {
+      testimRightArrow.click();
+    } else {
+      return;
+    }
+  });
 };
 // Togglk navebar
 
@@ -135,15 +135,15 @@ let open_menu = document.getElementById("open_menu");
 let close_menu = document.getElementById("close_menu");
 
 function openNavbar() {
-    nav_menu.style.marginTop = "0";
-    close_menu.style.display = "block";
-    open_menu.style.display = "none";
+  nav_menu.style.marginTop = "0";
+  close_menu.style.display = "block";
+  open_menu.style.display = "none";
 }
 
 function closeNavbar() {
-    nav_menu.style.marginTop = "-1200px";
-    close_menu.style.display = "none";
-    open_menu.style.display = "block";
+  nav_menu.style.marginTop = "-1200px";
+  close_menu.style.display = "none";
+  open_menu.style.display = "block";
 }
 
 // for background color of navbar and footer
@@ -155,26 +155,26 @@ let greenBtn = document.getElementById("green");
 let blueBtn = document.getElementById("blue");
 
 const handleNavColor = (e) => {
-    console.log("run", e.name);
-    if (e.name === "red") {
-        navBar.style.backgroundColor = "#e85d77e8";
-        fooTer.style.backgroundColor = "#e85d77e8";
-        redBtn.classList.add("active-state3");
-        blueBtn.classList.remove("active-state1");
-        greenBtn.classList.remove("active-state2");
-    } else if (e.name === "green") {
-        navBar.style.backgroundColor = "#0f151fcc";
-        fooTer.style.backgroundColor = "#0f151fcc";
-        greenBtn.classList.add("active-state2");
-        redBtn.classList.remove("active-state3");
-        blueBtn.classList.remove("active-state1");
-    } else if (e.name === "blue") {
-        navBar.style.backgroundColor = "rgb(21 55 108 / 89%)";
-        fooTer.style.backgroundColor = "rgb(21 55 108 / 89%)";
-        blueBtn.classList.add("active-state1");
-        greenBtn.classList.remove("active-state2");
-        redBtn.classList.remove("active-state3");
-    }
+  console.log("run", e.name);
+  if (e.name === "red") {
+    navBar.style.backgroundColor = "#e85d77e8";
+    fooTer.style.backgroundColor = "#e85d77e8";
+    redBtn.classList.add("active-state3");
+    blueBtn.classList.remove("active-state1");
+    greenBtn.classList.remove("active-state2");
+  } else if (e.name === "green") {
+    navBar.style.backgroundColor = "#0f151fcc";
+    fooTer.style.backgroundColor = "#0f151fcc";
+    greenBtn.classList.add("active-state2");
+    redBtn.classList.remove("active-state3");
+    blueBtn.classList.remove("active-state1");
+  } else if (e.name === "blue") {
+    navBar.style.backgroundColor = "rgb(21 55 108 / 89%)";
+    fooTer.style.backgroundColor = "rgb(21 55 108 / 89%)";
+    blueBtn.classList.add("active-state1");
+    greenBtn.classList.remove("active-state2");
+    redBtn.classList.remove("active-state3");
+  }
 };
 handleNavColor("blue");
 
@@ -304,424 +304,429 @@ const h_arrow = document.querySelectorAll(".h_arrow");
 const nav_item = document.querySelectorAll(".nav-item");
 
 function HandleLanguage(e) {
-    const language = e ? e : "english";
-    localStorage.setItem("lang", language);
-    const getLang = localStorage.getItem("lang");
+  const language = e ? e : "english";
+  localStorage.setItem("lang", language);
+  const getLang = localStorage.getItem("lang");
 
-    if (getLang === "urdu") {
-        engLng.classList.remove("d-none");
-        arabicLng.classList.add("d-none");
+  if (getLang === "urdu") {
+    engLng.classList.remove("d-none");
+    arabicLng.classList.add("d-none");
 
-        for (let i = 0; i < ele.length; i++) {
-            ele[i].classList.add("test2");
-        }
-
-        // for (let i = 0; i < gear.length; i++) {
-        //   gear[i].style.direction = "rtl";
-        // }
-        pillsTab.style.direction = "rtl";
-
-        gear2.style.marginRight = "63px";
-        gear3.style.marginRight = "95px";
-
-        buttonTop.style.left = "30px";
-        buttonTop.style.right = "inherit";
-
-        nav_id.style.direction = "rtl";
-        nav_id.style.fontFamily = "DroidArabicKufiRegular";
-        footer.style.direction = "rtl";
-        footer.style.fontFamily = "DroidArabicKufiRegular";
-        exp1.style.justifyContent = "flex-end";
-        exp1.style.flexDirection = "row-reverse";
-        exp2.style.justifyContent = "flex-end";
-        exp2.style.flexDirection = "row-reverse";
-        // color.innerHTML = "اللون";
-        // color.style.textAlign = "right";
-        n1.style.textAlign = "right";
-        n1.innerHTML = "القائمة الرئيسية";
-        n1.style.fontSize = "0.8rem";
-        n2.style.textAlign = "right";
-        n2.innerHTML = "واحة التحديات ";
-        n3.style.textAlign = "right";
-        n3.innerHTML = "واحة الإبتكارات";
-        n4.style.textAlign = "right";
-        n4.innerHTML = "واحة الاستثمارات ";
-        n5.style.textAlign = "right";
-        n5.innerHTML = "كوِّن فريقك";
-        n6.style.textAlign = "right";
-        n6.innerHTML = "الفعاليات";
-        n7.style.textAlign = "right";
-        n7.innerHTML = "إنشاء حساب  / تسجيل دخول";
-
-        ge1.innerHTML = "الحكومة";
-        ge2.innerHTML = "المستثمرين";
-        ge3.innerHTML = "الشركات الناشئة";
-        ge4.innerHTML = "المبتكرين";
-        ge5.innerHTML = "القطاعات <br>األكاديمية";
-
-        ge1.style.fontFamily = "DroidArabicKufiRegular";
-        ge2.style.fontFamily = "DroidArabicKufiRegular";
-        ge3.style.fontFamily = "DroidArabicKufiRegular";
-        ge4.style.fontFamily = "DroidArabicKufiRegular";
-        ge5.style.fontFamily = "DroidArabicKufiRegular";
-
-        d1_1.style.textAlign = "right";
-        d1_1.innerHTML = "سجل التحدي";
-        d1_2.style.textAlign = "right";
-        d1_2.innerHTML = "سجل حلول للتحديات";
-        d1_3.style.textAlign = "right";
-        d1_3.innerHTML = "سجل في هاكثون";
-        d1_4.style.textAlign = "right";
-        d1_4.innerHTML = "قصص نجاح";
-
-        d2_1.style.textAlign = "right";
-        d2_1.innerHTML = "المسرعات";
-        d2_2.style.textAlign = "right";
-        d2_2.innerHTML = "حاضنات";
-        d2_3.style.textAlign = "right";
-        d2_3.innerHTML = "الموجهين";
-        d2_4.style.textAlign = "right";
-        d2_4.innerHTML = "الدورات";
-        d2_5.style.textAlign = "right";
-        d2_5.innerHTML = "التعلم الإلكتروني";
-
-        d2_p1.style.textAlign = "right";
-        d2_p1.innerHTML = "سجل في برامج التسريع";
-        d2_p2.style.textAlign = "right";
-        d2_p2.innerHTML = "سجل في الحاضنات";
-        d2_p3.style.textAlign = "right";
-        d2_p3.innerHTML = "إبحث عن الموجه";
-        d2_p4.style.textAlign = "right";
-        d2_p4.innerHTML = "سجل كموجه";
-        d2_p5.style.textAlign = "right";
-        d2_p5.innerHTML = "البحث عن البرامج التدريبية المناسبة لأهدافك";
-        d2_p6.style.textAlign = "right";
-        d2_p6.innerHTML = "البحث عن الدورات";
-
-        d3_1.style.textAlign = "right";
-        d3_2.style.textAlign = "right";
-        d3_3.style.textAlign = "right";
-        d3_4.style.textAlign = "right";
-
-        d3_1.innerHTML = "المستثمرون";
-        d3_2.innerHTML = "الاستثمارات";
-        d3_3.innerHTML = "الشركات الناشئة";
-        d3_4.innerHTML = "التمويل";
-
-        d3p_1.style.textAlign = "right";
-        d3p_2.style.textAlign = "right";
-        d3p_3.style.textAlign = "right";
-        d3p_4.style.textAlign = "right";
-        d3p_5.style.textAlign = "right";
-
-        d3p_1.innerHTML = "سجل كمستثمر";
-        d3p_2.innerHTML = "البحث عن فرص الاستثمار";
-        d3p_3.innerHTML = "ابحث عن أفضل الشركات الناشئة واستثمر فيها";
-        d3p_4.innerHTML = "تسجيل الشركات الناشئة الخاصة بك";
-        d3p_5.innerHTML = "تمويل المشاريع الإبتكارية";
-
-        d4_1.style.textAlign = "right";
-        d4_2.style.textAlign = "right";
-        d4_3.style.textAlign = "right";
-        d4_4.style.textAlign = "right";
-
-        d4_1.innerHTML = "سجل مهاراتك";
-        d4_2.innerHTML = "ابحث عن أفضل المواهب";
-        d4_3.innerHTML = "البحث عن أفضل الشركات الناشئة";
-        d4_4.innerHTML = "طلب مهارة";
-
-        d5_1.style.textAlign = "right";
-        d5_2.style.textAlign = "right";
-        d5_3.style.textAlign = "right";
-        d5_4.style.textAlign = "right";
-        d5_5.style.textAlign = "right";
-
-        d5_1.innerHTML = "أخبار";
-        d5_2.innerHTML = "الفعاليات القادمة ";
-        d5_3.innerHTML = "الفعاليات السابقة";
-        d5_4.innerHTML = "تواصل معنا مباشرة لعمل فعاليات خاصة ";
-        d5_5.innerHTML = "تواصل معنا مباشرة لحجز إجتماعات خاصة";
-
-        l_ino.innerHTML = "أحدث الإبتكارات";
-        lc.innerHTML = "أحدث التحديات";
-
-        ei.innerHTML = "إستعرض الإبتكارات";
-        ec.innerHTML = "إستعرض التحديات";
-
-        h1.innerHTML = "التعاون هو المفتاح لتسريع الابتكار";
-        h1.style.fontFamily = "DroidArabicKufiRegular";
-
-        h2.innerHTML =
-            "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
-        h2.style.fontFamily = "DroidArabicKufiRegular";
-        // h2.style.fontWeight="normal"
-        ft_1.innerHTML = "نبذة عنا";
-        ft_2.innerHTML = "نبدة عن واحات اإلبتكار";
-        ft_3.innerHTML = "خدماتنا";
-        ft_4.innerHTML = "فريق العمل";
-        ft_5.innerHTML = "شركائنا";
-        ft_6.innerHTML = "الأسئلة الشائعة";
-
-        ft2_1.innerHTML = "روابط سريعة";
-
-        ft2_2.innerHTML = "تحديات";
-        ft2_3.innerHTML = "الابتكارات";
-        ft2_4.innerHTML = "التمويل";
-        ft2_5.innerHTML = "التدريب";
-        ft2_6.innerHTML = "التوجية";
-        ft2_7.innerHTML = "برامج تسريع";
-        ft2_8.innerHTML = "المهارات";
-        ft2_9.innerHTML = "أدوات اإلبتكار";
-        ft3_1.innerHTML = "الفعاليات";
-        ft3_2.innerHTML = "القادمة";
-        ft3_3.innerHTML = "السابقة";
-        ft3_4.innerHTML = "هاكثون";
-        ft3_5.innerHTML = "مسابقات";
-        // ft3_6.innerHTM = "إستبيانات";
-
-        news_letter.innerHTML = "اشترك في نشرتنا اإلخبارية";
-        n_update.innerHTML = "ابق على اطالع بأحدث األخبار والفعاليات والمزيد";
-        subs.innerHTML = "اإلشتراك";
-
-        for (let i = 0; i < h_arrow.length; i++) {
-            h_arrow[i].style.marginRight = "-6px";
-            // h_arrow[i].style.marginLeft = "0";
-        }
-
-        for (let i = 0; i < nav_item.length; i++) {
-            nav_item[i].style.margin = "0 10px";
-        }
-
-        for (let i = 0; i < rotate_arrow.length; i++) {
-            rotate_arrow[i].style.transform = "rotate(-180deg)";
-        }
-    } else {
-        // languageValue.innerHTML = "English";
-        engLng.classList.add("d-none");
-        arabicLng.classList.remove("d-none");
-
-        // for (let i = 0; i < gear.length; i++) {
-        //   gear[i].style.direction = "ltr";
-        // }
-
-        for (let i = 0; i < h_arrow.length; i++) {
-            h_arrow[i].style.marginLeft = "-17px";
-            // h_arrow[i].style.marginRight = "0";
-        }
-
-        for (let i = 0; i < nav_item.length; i++) {
-            nav_item[i].style.margin = "0 6px";
-        }
-
-        for (let i = 0; i < rotate_arrow.length; i++) {
-            rotate_arrow[i].style.transform = "rotate(0deg)";
-        }
-
-        // color.innerHTML = "Color";
-        // color.style.textAlign = "left";
-        n1.style.textAlign = "left";
-        n2.style.textAlign = "left";
-        n3.style.textAlign = "left";
-        n4.style.textAlign = "left";
-        n5.style.textAlign = "left";
-        n6.style.textAlign = "left";
-        n7.style.textAlign = "left";
-
-        nav_id.style.direction = "ltr";
-        nav_id.style.fontFamily = "sans-serif";
-        footer.style.direction = "ltr";
-        footer.style.fontFamily = "sans-serif";
-
-        exp1.style.justifyContent = "flex-end";
-        exp1.style.flexDirection = "row";
-        exp2.style.justifyContent = "flex-end";
-        exp2.style.flexDirection = "row";
-
-        pillsTab.style.direction = "ltr";
-        gear2.style.marginRight = "0px";
-        gear3.style.marginRight = "0px";
-        buttonTop.style.right = "30px";
-        buttonTop.style.left = "inherit";
-
-        n1.innerHTML = "Home";
-        n2.innerHTML = "Challenges Oasis";
-        n3.innerHTML = "Innovations Oasis";
-        n4.innerHTML = "Investments Oasis";
-        n5.innerHTML = "Build your team";
-        n6.innerHTML = "Events";
-        n7.innerHTML = "Register / Login";
-
-        ge1.innerHTML = "Government";
-        ge2.innerHTML = "Investors";
-        ge3.innerHTML = "Startups";
-        ge4.innerHTML = "Innovators";
-        ge5.innerHTML = "Academic <br> sectors";
-
-        d1_1.style.textAlign = "left";
-        d1_2.style.textAlign = "left";
-        d1_3.style.textAlign = "left";
-        d1_4.style.textAlign = "left";
-
-        d1_1.innerHTML = "Post challenges";
-        d1_2.innerHTML = "Solve challenges";
-        d1_3.innerHTML = "Join Hackathon";
-        d1_4.innerHTML = "Success story";
-
-        d2_1.style.textAlign = "left";
-        d2_2.style.textAlign = "left";
-        d2_3.style.textAlign = "left";
-        d2_4.style.textAlign = "left";
-        d2_5.style.textAlign = "left";
-
-        d2_1.innerHTML = "Accelerators";
-        d2_2.innerHTML = "Incubators";
-        d2_3.innerHTML = "Mentors";
-        d2_4.innerHTML = "Training";
-        d2_5.innerHTML = "E-learning";
-
-        d2_p1.style.textAlign = "left";
-        d2_p2.style.textAlign = "left";
-        d2_p3.style.textAlign = "left";
-        d2_p4.style.textAlign = "left";
-        d2_p5.style.textAlign = "left";
-        d2_p6.style.textAlign = "left";
-
-        d2_p1.innerHTML = "Register for Acceleration Programs";
-        d2_p2.innerHTML = "Register for incubators";
-        d2_p3.innerHTML = "Find Mentors";
-        d2_p4.innerHTML = "Register as a mentor";
-        d2_p5.innerHTML = "Find training Programs";
-        d2_p6.innerHTML = "Find courses";
-
-        d3_1.style.textAlign = "left";
-        d3_2.style.textAlign = "left";
-        d3_3.style.textAlign = "left";
-        d3_4.style.textAlign = "left";
-
-        d3_1.innerHTML = "Investors";
-        d3_2.innerHTML = "Investments";
-        d3_3.innerHTML = "Start-ups";
-        d3_4.innerHTML = "Funding";
-
-        d3p_1.style.textAlign = "left";
-        d3p_2.style.textAlign = "left";
-        d3p_3.style.textAlign = "left";
-        d3p_4.style.textAlign = "left";
-        d3p_5.style.textAlign = "left";
-
-        d3p_1.innerHTML = "Register as investors";
-        d3p_2.innerHTML = "Search for investment opportunities";
-        d3p_3.innerHTML = "Find & Invest on the best start-ups";
-        d3p_4.innerHTML = "Register your start-ups";
-        d3p_5.innerHTML = "Funding to bring creative project to life";
-
-        d4_1.style.textAlign = "left";
-        d4_2.style.textAlign = "left";
-        d4_3.style.textAlign = "left";
-        d4_4.style.textAlign = "left";
-
-        d4_1.innerHTML = "Talent register";
-        d4_2.innerHTML = "Find top talent";
-        d4_3.innerHTML = "Find top startups";
-        d4_4.innerHTML = "Request talents";
-
-        // d4_1.innerHTML = "News";
-        // d4_2.innerHTML = "Upcoming event";
-        // d4_3.innerHTML = "Past event";
-        // d4_4.innerHTML = "Customized Events Contact Us Directly";
-
-        d5_1.style.textAlign = "left";
-        d5_2.style.textAlign = "left";
-        d5_3.style.textAlign = "left";
-        d5_4.style.textAlign = "left";
-        d5_5.style.textAlign = "left";
-
-        d5_1.innerHTML = "News";
-        d5_2.innerHTML = "Upcoming event";
-        d5_3.innerHTML = "Past event";
-        d5_4.innerHTML = "Customized Events Contact Us Directly";
-        d5_5.innerHTML = "Customized Meetings Contact Us Directly";
-
-        h1.innerHTML = "Collaboration is the key to speeding up innovation";
-        h2.innerHTML =
-            "The Digital Innovation Oases connects startups with public and private sectors to transform ideas to products or services";
-
-        lc.innerHTML = "Latest challenges";
-        l_ino.innerHTML = "Latest Innovations";
-
-        ei.innerHTML = "Explore Innovation";
-        ec.innerHTML = "Explore Challenges";
-
-        ft_1.innerHTML = "About us";
-        ft_2.innerHTML = "About IOs";
-        ft_3.innerHTML = "Our services";
-        ft_4.innerHTML = "Teams";
-        ft_5.innerHTML = "Partners";
-        ft_6.innerHTML = "FAQ";
-
-        ft2_1.innerHTML = "Quick Links";
-        ft2_2.innerHTML = "Challenges";
-        ft2_3.innerHTML = "Innovations";
-        ft2_4.innerHTML = "Funding";
-        ft2_5.innerHTML = "Training";
-        ft2_6.innerHTML = "Mentors";
-        ft2_7.innerHTML = "Accelerator";
-        ft2_8.innerHTML = "Talents";
-        ft2_9.innerHTML = "Innovation Tools";
-
-        ft3_1.innerHTML = "Events";
-        ft3_2.innerHTML = "Coming";
-        ft3_3.innerHTML = "Past";
-        ft3_4.innerHTML = "Hackathons";
-        ft3_5.innerHTML = "Awards";
-
-        news_letter.innerHTML = "Subscribe to our NewsLetter";
-        n_update.innerHTML = "Stay updated with our latest news, events and more.";
-        subs.innerHTML = "Subscribe";
-        ge1.style.fontFamily = 'Roboto,"sans-serif"';
-        ge2.style.fontFamily = 'Roboto,"sans-serif"';
-        ge3.style.fontFamily = 'Roboto,"sans-serif"';
-        ge4.style.fontFamily = 'Roboto,"sans-serif"';
-        ge5.style.fontFamily = 'Roboto,"sans-serif"';
+    for (let i = 0; i < ele.length; i++) {
+      ele[i].classList.add("test2");
     }
+
+    // for (let i = 0; i < gear.length; i++) {
+    //   gear[i].style.direction = "rtl";
+    // }
+    pillsTab.style.direction = "rtl";
+
+    gear2.style.marginRight = "63px";
+    gear3.style.marginRight = "95px";
+
+    buttonTop.style.left = "30px";
+    buttonTop.style.right = "inherit";
+
+    nav_id.style.direction = "rtl";
+    nav_id.style.fontFamily = "DroidArabicKufiRegular";
+    footer.style.direction = "rtl";
+    footer.style.fontFamily = "DroidArabicKufiRegular";
+    exp1.style.justifyContent = "flex-end";
+    exp1.style.flexDirection = "row-reverse";
+    exp2.style.justifyContent = "flex-end";
+    exp2.style.flexDirection = "row-reverse";
+    // color.innerHTML = "اللون";
+    // color.style.textAlign = "right";
+    n1.style.textAlign = "right";
+    n1.innerHTML = "القائمة الرئيسية";
+    n1.style.fontSize = "0.8rem";
+    n2.style.textAlign = "right";
+    n2.innerHTML = "واحة التحديات ";
+    n3.style.textAlign = "right";
+    n3.innerHTML = "واحة الإبتكارات";
+    n4.style.textAlign = "right";
+    n4.innerHTML = "واحة الاستثمارات ";
+    n5.style.textAlign = "right";
+    n5.innerHTML = "كوِّن فريقك";
+    n6.style.textAlign = "right";
+    n6.innerHTML = "الفعاليات";
+    n7.style.textAlign = "right";
+    n7.innerHTML = "إنشاء حساب  / تسجيل دخول";
+
+    ge1.innerHTML = "الحكومة";
+    ge2.innerHTML = "المستثمرين";
+    ge3.innerHTML = "الشركات الناشئة";
+    ge4.innerHTML = "المبتكرين";
+    ge5.innerHTML = "القطاعات <br>األكاديمية";
+
+    ge1.style.fontFamily = "DroidArabicKufiRegular";
+    ge2.style.fontFamily = "DroidArabicKufiRegular";
+    ge3.style.fontFamily = "DroidArabicKufiRegular";
+    ge4.style.fontFamily = "DroidArabicKufiRegular";
+    ge5.style.fontFamily = "DroidArabicKufiRegular";
+
+    d1_1.style.textAlign = "right";
+    d1_1.innerHTML = "سجل التحدي";
+    d1_2.style.textAlign = "right";
+    d1_2.innerHTML = "سجل حلول للتحديات";
+    d1_3.style.textAlign = "right";
+    d1_3.innerHTML = "سجل في هاكثون";
+    d1_4.style.textAlign = "right";
+    d1_4.innerHTML = "قصص نجاح";
+
+    d2_1.style.textAlign = "right";
+    d2_1.innerHTML = "المسرعات";
+    d2_2.style.textAlign = "right";
+    d2_2.innerHTML = "حاضنات";
+    d2_3.style.textAlign = "right";
+    d2_3.innerHTML = "الموجهين";
+    d2_4.style.textAlign = "right";
+    d2_4.innerHTML = "الدورات";
+    d2_5.style.textAlign = "right";
+    d2_5.innerHTML = "التعلم الإلكتروني";
+
+    d2_p1.style.textAlign = "right";
+    d2_p1.innerHTML = "سجل في برامج التسريع";
+    d2_p2.style.textAlign = "right";
+    d2_p2.innerHTML = "سجل في الحاضنات";
+    d2_p3.style.textAlign = "right";
+    d2_p3.innerHTML = "إبحث عن الموجه";
+    d2_p4.style.textAlign = "right";
+    d2_p4.innerHTML = "سجل كموجه";
+    d2_p5.style.textAlign = "right";
+    d2_p5.innerHTML = "البحث عن البرامج التدريبية المناسبة لأهدافك";
+    d2_p6.style.textAlign = "right";
+    d2_p6.innerHTML = "البحث عن الدورات";
+
+    d3_1.style.textAlign = "right";
+    d3_2.style.textAlign = "right";
+    d3_3.style.textAlign = "right";
+    d3_4.style.textAlign = "right";
+
+    d3_1.innerHTML = "المستثمرون";
+    d3_2.innerHTML = "الاستثمارات";
+    d3_3.innerHTML = "الشركات الناشئة";
+    d3_4.innerHTML = "التمويل";
+
+    d3p_1.style.textAlign = "right";
+    d3p_2.style.textAlign = "right";
+    d3p_3.style.textAlign = "right";
+    d3p_4.style.textAlign = "right";
+    d3p_5.style.textAlign = "right";
+
+    d3p_1.innerHTML = "سجل كمستثمر";
+    d3p_2.innerHTML = "البحث عن فرص الاستثمار";
+    d3p_3.innerHTML = "ابحث عن أفضل الشركات الناشئة واستثمر فيها";
+    d3p_4.innerHTML = "تسجيل الشركات الناشئة الخاصة بك";
+    d3p_5.innerHTML = "تمويل المشاريع الإبتكارية";
+
+    d4_1.style.textAlign = "right";
+    d4_2.style.textAlign = "right";
+    d4_3.style.textAlign = "right";
+    d4_4.style.textAlign = "right";
+
+    d4_1.innerHTML = "سجل مهاراتك";
+    d4_2.innerHTML = "ابحث عن أفضل المواهب";
+    d4_3.innerHTML = "البحث عن أفضل الشركات الناشئة";
+    d4_4.innerHTML = "طلب مهارة";
+
+    d5_1.style.textAlign = "right";
+    d5_2.style.textAlign = "right";
+    d5_3.style.textAlign = "right";
+    d5_4.style.textAlign = "right";
+    d5_5.style.textAlign = "right";
+
+    d5_1.innerHTML = "أخبار";
+    d5_2.innerHTML = "الفعاليات القادمة ";
+    d5_3.innerHTML = "الفعاليات السابقة";
+    d5_4.innerHTML = "تواصل معنا مباشرة لعمل فعاليات خاصة ";
+    d5_5.innerHTML = "تواصل معنا مباشرة لحجز إجتماعات خاصة";
+
+    l_ino.innerHTML = "أحدث الإبتكارات";
+    lc.innerHTML = "أحدث التحديات";
+
+    ei.innerHTML = "إستعرض الإبتكارات";
+    ec.innerHTML = "إستعرض التحديات";
+
+    h1.innerHTML = "التعاون هو المفتاح لتسريع الابتكار";
+    h1.style.fontFamily = "DroidArabicKufiRegular";
+
+    h2.innerHTML =
+      "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
+    h2.style.fontFamily = "DroidArabicKufiRegular";
+    // h2.style.fontWeight="normal"
+    ft_1.innerHTML = "نبذة عنا";
+    ft_2.innerHTML = "نبدة عن واحات اإلبتكار";
+    ft_3.innerHTML = "خدماتنا";
+    ft_4.innerHTML = "فريق العمل";
+    ft_5.innerHTML = "شركائنا";
+    ft_6.innerHTML = "الأسئلة الشائعة";
+
+    ft2_1.innerHTML = "روابط سريعة";
+
+    ft2_2.innerHTML = "تحديات";
+    ft2_3.innerHTML = "الابتكارات";
+    ft2_4.innerHTML = "التمويل";
+    ft2_5.innerHTML = "التدريب";
+    ft2_6.innerHTML = "التوجيه";
+    ft2_7.innerHTML = "برامج تسريع";
+    ft2_8.innerHTML = "المهارات";
+    ft2_9.innerHTML = "أدوات اإلبتكار";
+    ft3_1.innerHTML = "الفعاليات";
+    ft3_2.innerHTML = "القادمة";
+    ft3_3.innerHTML = "السابقة";
+    ft3_4.innerHTML = "هاكثون";
+    ft3_5.innerHTML = "المسابقات";
+    // ft3_6.innerHTM = "إستبيانات";
+
+    news_letter.innerHTML = "اشترك في نشرتنا اإلخبارية";
+    n_update.innerHTML = "ابق على اطالع بأحدث األخبار والفعاليات والمزيد";
+    subs.innerHTML = "اإلشتراك";
+
+    for (let i = 0; i < h_arrow.length; i++) {
+      h_arrow[i].style.marginRight = "-6px";
+    }
+
+    for (let i = 0; i < nav_item.length; i++) {
+      nav_item[i].style.margin = "0 10px";
+    }
+
+    for (let i = 0; i < rotate_arrow.length; i++) {
+      rotate_arrow[i].style.transform = "rotate(-180deg)";
+    }
+  } else {
+    // languageValue.innerHTML = "English";
+    engLng.classList.add("d-none");
+    arabicLng.classList.remove("d-none");
+
+    // for (let i = 0; i < gear.length; i++) {
+    //   gear[i].style.direction = "ltr";
+    // }
+
+    for (let i = 0; i < h_arrow.length; i++) {
+      h_arrow[i].style.marginLeft = "-17px";
+      // h_arrow[i].style.marginRight = "0";
+    }
+
+    for (let i = 0; i < nav_item.length; i++) {
+      nav_item[i].style.margin = "0 6px";
+    }
+
+    for (let i = 0; i < rotate_arrow.length; i++) {
+      rotate_arrow[i].style.transform = "rotate(0deg)";
+    }
+
+    // color.innerHTML = "Color";
+    // color.style.textAlign = "left";
+    n1.style.textAlign = "left";
+    n2.style.textAlign = "left";
+    n3.style.textAlign = "left";
+    n4.style.textAlign = "left";
+    n5.style.textAlign = "left";
+    n6.style.textAlign = "left";
+    n7.style.textAlign = "left";
+
+    nav_id.style.direction = "ltr";
+    nav_id.style.fontFamily = "sans-serif";
+    footer.style.direction = "ltr";
+    footer.style.fontFamily = "sans-serif";
+
+    exp1.style.justifyContent = "flex-end";
+    exp1.style.flexDirection = "row";
+    exp2.style.justifyContent = "flex-end";
+    exp2.style.flexDirection = "row";
+
+    pillsTab.style.direction = "ltr";
+    gear2.style.marginRight = "0px";
+    gear3.style.marginRight = "0px";
+    buttonTop.style.right = "30px";
+    buttonTop.style.left = "inherit";
+
+    n1.innerHTML = "Home";
+    n2.innerHTML = "Challenges Oasis";
+    n3.innerHTML = "Innovations Oasis";
+    n4.innerHTML = "Investments Oasis";
+    n5.innerHTML = "Build your team";
+    n6.innerHTML = "Events";
+    n7.innerHTML = "Register / Login";
+
+    ge1.innerHTML = "Government";
+    ge2.innerHTML = "Investors";
+    ge3.innerHTML = "Startups";
+    ge4.innerHTML = "Innovators";
+    ge5.innerHTML = "Academic <br> sectors";
+
+    d1_1.style.textAlign = "left";
+    d1_2.style.textAlign = "left";
+    d1_3.style.textAlign = "left";
+    d1_4.style.textAlign = "left";
+
+    d1_1.innerHTML = "Post challenges";
+    d1_2.innerHTML = "Solve challenges";
+    d1_3.innerHTML = "Join Hackathon";
+    d1_4.innerHTML = "Success story";
+
+    d2_1.style.textAlign = "left";
+    d2_2.style.textAlign = "left";
+    d2_3.style.textAlign = "left";
+    d2_4.style.textAlign = "left";
+    d2_5.style.textAlign = "left";
+
+    d2_1.innerHTML = "Accelerators";
+    d2_2.innerHTML = "Incubators";
+    d2_3.innerHTML = "Mentors";
+    d2_4.innerHTML = "Training";
+    d2_5.innerHTML = "E-learning";
+
+    d2_p1.style.textAlign = "left";
+    d2_p2.style.textAlign = "left";
+    d2_p3.style.textAlign = "left";
+    d2_p4.style.textAlign = "left";
+    d2_p5.style.textAlign = "left";
+    d2_p6.style.textAlign = "left";
+
+    d2_p1.innerHTML = "Register for Acceleration Programs";
+    d2_p2.innerHTML = "Register for incubators";
+    d2_p3.innerHTML = "Find Mentors";
+    d2_p4.innerHTML = "Register as a mentor";
+    d2_p5.innerHTML = "Find training Programs";
+    d2_p6.innerHTML = "Find courses";
+
+    d3_1.style.textAlign = "left";
+    d3_2.style.textAlign = "left";
+    d3_3.style.textAlign = "left";
+    d3_4.style.textAlign = "left";
+
+    d3_1.innerHTML = "Investors";
+    d3_2.innerHTML = "Investments";
+    d3_3.innerHTML = "Start-ups";
+    d3_4.innerHTML = "Funding";
+
+    d3p_1.style.textAlign = "left";
+    d3p_2.style.textAlign = "left";
+    d3p_3.style.textAlign = "left";
+    d3p_4.style.textAlign = "left";
+    d3p_5.style.textAlign = "left";
+
+    d3p_1.innerHTML = "Register as investors";
+    d3p_2.innerHTML = "Search for investment opportunities";
+    d3p_3.innerHTML = "Find & Invest on the best start-ups";
+    d3p_4.innerHTML = "Register your start-ups";
+    d3p_5.innerHTML = "Funding to bring creative project to life";
+
+    d4_1.style.textAlign = "left";
+    d4_2.style.textAlign = "left";
+    d4_3.style.textAlign = "left";
+    d4_4.style.textAlign = "left";
+
+    d4_1.innerHTML = "Talent register";
+    d4_2.innerHTML = "Find top talent";
+    d4_3.innerHTML = "Find top startups";
+    d4_4.innerHTML = "Request talents";
+
+    // d4_1.innerHTML = "News";
+    // d4_2.innerHTML = "Upcoming event";
+    // d4_3.innerHTML = "Past event";
+    // d4_4.innerHTML = "Customized Events Contact Us Directly";
+
+    d5_1.style.textAlign = "left";
+    d5_2.style.textAlign = "left";
+    d5_3.style.textAlign = "left";
+    d5_4.style.textAlign = "left";
+    d5_5.style.textAlign = "left";
+
+    d5_1.innerHTML = "News";
+    d5_2.innerHTML = "Upcoming event";
+    d5_3.innerHTML = "Past event";
+    d5_4.innerHTML = "Customized Events Contact Us Directly";
+    d5_5.innerHTML = "Customized Meetings Contact Us Directly";
+
+    h1.innerHTML = "Collaboration is the key to speeding up innovation";
+    h2.innerHTML =
+      "The Digital Innovation Oases connects startups with public and private sectors to transform ideas to products or services";
+
+    lc.innerHTML = "Latest challenges";
+    l_ino.innerHTML = "Latest Innovations";
+
+    ei.innerHTML = "Explore Innovation";
+    ec.innerHTML = "Explore Challenges";
+
+    ft_1.innerHTML = "About us";
+    ft_2.innerHTML = "About IOs";
+    ft_3.innerHTML = "Our services";
+    ft_4.innerHTML = "Teams";
+    ft_5.innerHTML = "Partners";
+    ft_6.innerHTML = "FAQ";
+
+    ft2_1.innerHTML = "Quick Links";
+    ft2_2.innerHTML = "Challenges";
+    ft2_3.innerHTML = "Innovations";
+    ft2_4.innerHTML = "Funding";
+    ft2_5.innerHTML = "Training";
+    ft2_6.innerHTML = "Mentors";
+    ft2_7.innerHTML = "Accelerator";
+    ft2_8.innerHTML = "Talents";
+    ft2_9.innerHTML = "Innovation Tools";
+
+    ft3_1.innerHTML = "Events";
+    ft3_2.innerHTML = "Coming";
+    ft3_3.innerHTML = "Past";
+    ft3_4.innerHTML = "Hackathons";
+    ft3_5.innerHTML = "Awards";
+
+    news_letter.innerHTML = "Subscribe to our NewsLetter";
+    n_update.innerHTML = "Stay updated with our latest news, events and more.";
+    subs.innerHTML = "Subscribe";
+    ge1.style.fontFamily = 'Roboto,"sans-serif"';
+    ge2.style.fontFamily = 'Roboto,"sans-serif"';
+    ge3.style.fontFamily = 'Roboto,"sans-serif"';
+    ge4.style.fontFamily = 'Roboto,"sans-serif"';
+    ge5.style.fontFamily = 'Roboto,"sans-serif"';
+  }
 }
 HandleLanguage(getLang);
 
 var btn = $("#buttonTop");
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass("show");
-    } else {
-        btn.removeClass("show");
-    }
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass("show");
+  } else {
+    btn.removeClass("show");
+  }
 });
 
-btn.on("click", function(e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, "300");
+btn.on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "300");
 });
 
 let navItemToggle = document.querySelectorAll(".nav-item");
 let nav_link = document.querySelectorAll(".dropdown-menu");
 
 navItemToggle.forEach((item, i) => {
-    let yes;
-    item.addEventListener("click", () => {
-        if (nav_link[i].classList.contains('d-block')) {
-            yes = true;
-        } else {
-            yes = false;
-        }
-        nav_link.forEach((val) => {
-            val.classList.remove("d-block");
-        });
-
-        if (yes) {
-            console.log(nav_link[i].parentNode.classList)
-            nav_link[i].classList.remove("d-block");
-        } else {
-            nav_link[i].classList.add("d-block");
-        }
+  let yes;
+  item.addEventListener("click", () => {
+    if (nav_link[i].classList.contains("d-block")) {
+      yes = true;
+    } else {
+      yes = false;
+    }
+    nav_link.forEach((val) => {
+      val.classList.remove("d-block");
     });
+
+    if (yes) {
+      //   console.log(nav_link[i].parentNode.classList);
+      nav_link[i].classList.remove("d-block");
+      //  for ( nav_link[i] = 0; nav_link[i] < h_arrow.length; i++) {
+      h_arrow[i].style.transform = "rotate(0deg)";
+      //   }
+    } else {
+      nav_link[i].classList.add("d-block");
+      //   for ( i = 0; i < h_arrow.length; i++) {
+      h_arrow[i].style.transform = "rotate(-180deg)";
+      //   }
+    }
+  });
 });

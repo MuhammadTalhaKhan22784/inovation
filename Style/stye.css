@@ -99,6 +99,8 @@ p {
   right: 10%;
 }
 
+/* Top Button */
+
 #buttonTop {
   display: inline-block;
   background-color: #ff9800;
@@ -115,6 +117,7 @@ p {
   visibility: hidden;
   z-index: 1000;
 }
+
 #buttonTop::after {
   content: "\f077";
   font-family: FontAwesome;
@@ -124,13 +127,16 @@ p {
   line-height: 50px;
   color: #fff;
 }
+
 #buttonTop:hover {
   cursor: pointer;
   background-color: #333;
 }
+
 #buttonTop:active {
   background-color: #555;
 }
+
 #buttonTop.show {
   opacity: 1;
   visibility: visible;
@@ -171,23 +177,11 @@ p {
 }
 
 .nav_logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin-right: -46px !important;
-  margin: 0;
   z-index: 10002;
-  border-radius: 50%;
 }
 
 .custom_navbar .navbar-nav {
-  /* height: 98px; */
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -226,9 +220,11 @@ p {
   height: 2px;
   background: #4f96d8;
 }
+
 .test2::before {
   right: -32px;
 }
+
 .custom_navbar .nav-item strong {
   color: #ffb800;
   font-size: 1.4rem;
@@ -251,10 +247,17 @@ p {
   align-items: center;
 }
 
-.custom_navbar .nav-item:hover img {
+/* .custom_navbar .nav-item:hover img {
   -webkit-transform: rotate(-180deg) !important;
   -ms-transform: rotate(-180deg) !important;
   transform: rotate(-180deg) !important;
+} */
+
+.dropdown-menu {
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 98px;
 }
 
 .co_dropdwn {
@@ -263,6 +266,13 @@ p {
   height: max-content;
   padding: 2rem 0;
   background-color: #f2f4f8;
+}
+
+.co_dropdwn h2 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
 .co_dropdwn i {
@@ -339,13 +349,6 @@ p {
   margin-left: 20px;
 }
 
-.co_dropdwn h2 {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
 .lang-dropdown {
   color: #ffb800;
   -webkit-box-shadow: none !important;
@@ -368,12 +371,6 @@ p {
   text-align: center;
 }
 
-.dropdown-menu {
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 98px;
-}
 /* 
 .nav-item:hover .dropdown-menu {
   display: block !important;
