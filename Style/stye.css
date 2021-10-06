@@ -111,7 +111,7 @@ p {
   text-align: center;
   border-radius: 4px;
   position: fixed;
-  bottom: 30px;
+  bottom: 88px;
   -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   -o-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
@@ -355,6 +355,10 @@ p {
   padding-right: 20px;
 }
 
+.search_input .fa-search {
+  color: rgb(94, 87, 87);
+}
+
 .search_input input {
   width: 100%;
   padding: 10px 20px;
@@ -474,7 +478,7 @@ p {
   margin-top: -3rem;
   width: 600px;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #4f96d8;
 }
 
@@ -2195,6 +2199,9 @@ p {
     justify-content: space-between;
     padding-left: 60px;
   }
+  .co_dropdwn h2 {
+    margin: 0;
+  }
   .h_logo {
     width: 70px;
     height: 70px;
@@ -2306,7 +2313,8 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 0px 0 8px;
+    /* padding: 0 0px 0 8px; */
+    padding: 0;
   }
   /* .desk-lang {
     display: none;
@@ -2627,7 +2635,7 @@ p {
     object-fit: cover;
   }
   .vs_box p {
-    width: 90%;
+    width: 100%;
     text-align: center;
     margin: 20px auto 0 auto;
   }
@@ -2669,6 +2677,9 @@ p {
 }
 
 @media screen and (max-width: 549px) {
+  .vs_box {
+    padding: 20px 10px;
+  }
   .vsb_3 > div:nth-child(1) {
     top: -37px;
     left: 173px;

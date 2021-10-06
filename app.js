@@ -108,24 +108,6 @@ window.onload = function () {
     }
   });
 };
-// Toggle navebar
-
-let nav_menu = document.getElementById("nav_menu");
-let open_menu = document.getElementById("open_menu");
-let close_menu = document.getElementById("close_menu");
-
-// open navbar menu
-function openNavbar() {
-  nav_menu.style.marginTop = "0";
-  close_menu.style.display = "block";
-  open_menu.style.display = "none";
-}
-// close navbar menu
-function closeNavbar() {
-  nav_menu.style.marginTop = "-1200px";
-  close_menu.style.display = "none";
-  open_menu.style.display = "block";
-}
 
 // Change language
 
@@ -579,7 +561,7 @@ function HandleLanguage(e) {
     copy_right.innerHTML = "Innovation Oases All Rights Are Reserved @ 2021";
     terms_text.innerHTML = "Term & condition";
     privacy_text.innerHTML = "Privacy";
-    cookie_text.innerHTML="Cookie Policy"
+    cookie_text.innerHTML = "Cookie Policy";
     ft_1.innerHTML = "About us";
     ft_2.innerHTML = "About IOs";
     ft_3.innerHTML = "Our services";
@@ -650,10 +632,29 @@ navItemToggle.forEach((item, i) => {
     if (yes) {
       //   console.log(nav_link[i].parentNode.classList);
       nav_link[i].classList.remove("d-block");
-      h_arrow[i].style.transform = "rotate(0deg)";
+      // h_arrow[i].style.transform = "rotate(0deg)";
     } else {
       nav_link[i].classList.add("d-block");
-      h_arrow[i].style.transform = "rotate(-180deg)";
+      // h_arrow[i].style.transform = "rotate(-180deg)";
     }
   });
 });
+
+// Toggle navebar
+
+let nav_menu = document.getElementById("nav_menu");
+let open_menu = document.getElementById("open_menu");
+let close_menu = document.getElementById("close_menu");
+
+// open navbar menu
+function openNavbar() {
+  nav_menu.style.marginTop = "0";
+  close_menu.style.display = "block";
+  open_menu.style.display = "none";
+}
+// close navbar menu
+function closeNavbar() {
+  nav_menu.style.marginTop = "-1200px";
+  close_menu.style.display = "none";
+  open_menu.style.display = "block";
+}
