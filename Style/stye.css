@@ -255,6 +255,8 @@ p {
 
 .nav-item .mb_h_arrow {
   display: none;
+  width: 20px;
+  margin: 0 !important;
 }
 .mb_h_arrow {
   display: none;
@@ -2217,7 +2219,7 @@ p {
   .nav_logo {
     margin-right: 0 !important;
   }
-  .desk_h_arrow {
+  .desk_harrow {
     display: none !important;
   }
   .h_arrow {
@@ -2225,6 +2227,11 @@ p {
   }
   .custom_navbar .nav-link {
     color: #15376ccc !important;
+    font-size: 1.1rem !important;
+    margin: 0;
+  }
+  .form_btn {
+    font-size: 1.1rem;
   }
   .fa-search {
     color: white;
@@ -2299,7 +2306,7 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 0px 0 8px;
   }
   /* .desk-lang {
     display: none;
@@ -2432,11 +2439,11 @@ p {
   .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .h_arrow {
+  /* .h_arrow {
     margin-left: -7px !important;
-  }
+  } */
   .menu_toggle img {
-    width: 25px;
+    width: 22px;
     -o-object-fit: contain;
     object-fit: contain;
   }
