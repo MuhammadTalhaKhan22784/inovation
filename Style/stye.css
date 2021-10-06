@@ -466,7 +466,7 @@ p {
   flex-direction: column;
 }
 
-.vs_box h2 {
+.vs_box > p {
   color: #4f96d8;
   font-weight: 600;
   letter-spacing: 2px;
@@ -2198,6 +2198,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding-left: 60px;
+    /* direction: ltr; */
   }
   .co_dropdwn h2 {
     margin: 0;
@@ -2239,6 +2240,7 @@ p {
   }
   .form_btn {
     font-size: 1.1rem;
+    padding: 10px 0;
   }
   .fa-search {
     color: white;
@@ -2266,7 +2268,7 @@ p {
   }
   .custom_navbar .nav-item {
     flex-direction: column;
-    margin: 5px 0 !important;
+    margin: 9px 0 !important;
     height: 100% !important;
     height: 67px;
     width: 100%;
@@ -2363,7 +2365,7 @@ p {
   .vs_box {
     height: 100vh;
   }
-  .vs_box h2 {
+  .vs_box > p {
     margin-left: 132px;
   }
   .vs_box p {
@@ -2416,7 +2418,7 @@ p {
   .lc_6 {
     font-size: 0.8rem;
   }
-  .vs_box h2 {
+  .vs_box > p {
     margin-left: 152px;
   }
   .vs_box p {
@@ -2434,7 +2436,7 @@ p {
   .vs_box > div .vs_video {
     width: 264px;
   }
-  .vs_box h2 {
+  .vs_box > p {
     margin-left: 0;
   }
   .vs_box p {
@@ -2678,7 +2680,7 @@ p {
 
 @media screen and (max-width: 549px) {
   .vs_box {
-    padding: 20px 10px;
+    padding: 20px 15px;
   }
   .vsb_3 > div:nth-child(1) {
     top: -37px;
@@ -2768,7 +2770,7 @@ p {
   .foot_5 {
     width: 90%;
   }
-  .vs_box h2 {
+  .vs_box > p {
     font-size: 1.2rem;
   }
   .foot_5 h2,
@@ -2821,7 +2823,7 @@ p {
   }
 }
 @media screen and (max-width: 380px) {
-  .vs_box h2 {
+  .vs_box > p {
     font-size: 1rem;
     line-height: 1.6;
   }
