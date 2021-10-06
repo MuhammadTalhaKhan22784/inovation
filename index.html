@@ -57,16 +57,37 @@
     <!-- HEADER START -->
 
     <nav class="custom_navbar navbar navbar-expand-lg navbar-light">
-      <a class="nav_logo" href="#"
+      <a class="nav_logo desk-logo" href="#"
         ><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo"
       /></a>
+
       <div id="navbar" class="nav_container">
-        <button id="open_menu" class="menu_toggle" onclick="openNavbar()">
-          <img src="Assets/Icons/menu.png" alt="" />
-        </button>
-        <button id="close_menu" class="menu_toggle" onclick="closeNavbar()">
-          <img src="Assets/Icons/cancel.png" alt="" />
-        </button>
+        <div>
+          <div>
+            <button id="open_menu" class="menu_toggle" onclick="openNavbar()">
+              <img src="Assets/Icons/menu.png" alt="" />
+            </button>
+            <button id="close_menu" class="menu_toggle" onclick="closeNavbar()">
+              <img src="Assets/Icons/cancel.png" alt="" />
+            </button>
+            <a class="nav_logo mb-logo" href="#"
+              ><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="nav-item mb-search">
+            <a class="nav-link"><i class="fas fa-search"></i></a>
+
+            <div class="dropdown-menu search_dropdwn">
+              <div class="search_input">
+                <input
+                  type="text"
+                  placeholder="Search (Seprate Tags via comma to Search Multiple)"
+                />
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="navbar-collapse">
           <ul id="nav_menu" class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -79,10 +100,11 @@
               <div>
                 <a id="n2" class="nav-link" href="#">Challenges Oasis</a>
                 <img
-                  class="h_arrow"
+                  class="h_arrow desk_harrow"
                   src="Assets/Images/down-arrow.svg"
-                  alt=""
+                  alt="..."
                 />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
               </div>
               <div class="dropdown-menu co_dropdwn cd_1">
                 <div class="container">
@@ -151,10 +173,11 @@
               <div>
                 <a id="n3" class="nav-link" href="#">Innovations Oasis</a>
                 <img
-                  class="h_arrow"
+                  class="h_arrow desk_harrow"
                   src="Assets/Images/down-arrow.svg"
-                  alt=""
+                  alt="..."
                 />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
               </div>
               <div class="dropdown-menu co_dropdwn cd_2">
                 <div class="container">
@@ -253,10 +276,11 @@
               <div>
                 <a id="n4" class="nav-link" href="#">Investments Oasis</a>
                 <img
-                  class="h_arrow"
+                  class="h_arrow desk_harrow"
                   src="Assets/Images/down-arrow.svg"
                   alt=""
                 />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
               </div>
               <div class="dropdown-menu co_dropdwn cd_3">
                 <div class="container">
@@ -346,10 +370,11 @@
               <div>
                 <a id="n5" class="nav-link" href="#">Build your team</a>
                 <img
-                  class="h_arrow"
+                  class="h_arrow desk_harrow"
                   src="Assets/Images/down-arrow.svg"
                   alt=""
                 />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
               </div>
               <div class="dropdown-menu co_dropdwn cd_4">
                 <div class="container">
@@ -375,7 +400,9 @@
                         align-items-center
                       "
                     >
-                      <div><img src="Assets/Images/star (1).svg" alt="" /></div>
+                      <div>
+                        <img src="Assets/Images/star (1).svg" alt="" />
+                      </div>
                       <div>
                         <h2 id="d4_2">Find top talent</h2>
                       </div>
@@ -416,10 +443,11 @@
               <div>
                 <a id="n6" class="nav-link" href="#">Events</a>
                 <img
-                  class="h_arrow"
+                  class="h_arrow desk_h_arrow"
                   src="Assets/Images/down-arrow.svg"
                   alt=""
                 />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
               </div>
               <div class="dropdown-menu co_dropdwn cd_5">
                 <div class="container">
@@ -495,7 +523,7 @@
               </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item desk-search">
               <a class="nav-link"><i class="fas fa-search"></i></a>
 
               <div class="dropdown-menu search_dropdwn">
@@ -512,7 +540,7 @@
               <button id="n7" class="form_btn">Register / Login</button>
             </li>
 
-            <div>
+            <div class="mb-lang">
               <button
                 id="engLng"
                 class="lang-btn d-none"
@@ -1735,15 +1763,16 @@
           </div>
           <hr />
           <div class="footer_body_foot">
-            <p>
-              <i class="far fa-copyright"></i>Innovation Oases All Rights Are
-              Reserved @ 2021
+            <p id="copy_right">
+              Innovation Oases All Rights Are Reserved @ 2021
             </p>
-            <p>
-              Terms & Condition
-              <span class="footer_center_line"></span> Privacy
-              <span class="footer_center_line"></span> Cookie Policy
-            </p>
+            <div>
+              <span id="terms_text">Terms & Condition</span>
+              <div class="footer_center_line"></div>
+              <span id="privacy_text">Privacy</span>
+              <div class="footer_center_line"></div>
+              <span id="cookie_text">Cookie Policy</span>
+            </div>
           </div>
         </div>
       </div>

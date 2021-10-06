@@ -189,6 +189,11 @@ const d5_5 = document.getElementById("d5_5");
 const h1 = document.getElementById("h1");
 const h2 = document.getElementById("h2");
 
+const copy_right = document.getElementById("copy_right");
+const terms_text = document.getElementById("terms_text");
+const privacy_text = document.getElementById("privacy_text");
+const cookie_text = document.getElementById("cookie_text");
+
 const ft_1 = document.getElementById("ft_1");
 const ft_2 = document.getElementById("ft_2");
 const ft_3 = document.getElementById("ft_3");
@@ -385,6 +390,10 @@ function HandleLanguage(e) {
     h2.innerHTML =
       "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
     h2.style.fontFamily = "DroidArabicKufiRegular";
+    copy_right.innerHTML = "واحات الإبتكار جميع الحقوق محفوظة";
+    terms_text.innerHTML = "الشروط والأحكام";
+    privacy_text.innerHTML = "سياسة الخصوصية";
+    cookie_text.innerHTML = "سياسة ملفات تعريف الارتباط";
     ft_1.innerHTML = "نبذة عنا";
     ft_2.innerHTML = "نبدة عن واحات اإلبتكار";
     ft_3.innerHTML = "خدماتنا";
@@ -567,6 +576,10 @@ function HandleLanguage(e) {
     ei.innerHTML = "Explore Innovation";
     ec.innerHTML = "Explore Challenges";
 
+    copy_right.innerHTML = "Innovation Oases All Rights Are Reserved @ 2021";
+    terms_text.innerHTML = "Term & condition";
+    privacy_text.innerHTML = "Privacy";
+    cookie_text.innerHTML="Cookie Policy"
     ft_1.innerHTML = "About us";
     ft_2.innerHTML = "About IOs";
     ft_3.innerHTML = "Our services";

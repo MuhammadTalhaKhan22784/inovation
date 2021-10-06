@@ -1,0 +1,76 @@
+.nav_container,
+.footer {
+  direction: rtl;
+  font-family: "DroidArabicKufiRegular";
+}
+
+.nav-link,
+.form_btn {
+  text-align: right;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.custom_navbar .nav-item p {
+  text-align: right;
+}
+
+.dropdown-menu h2 {
+  text-align: right;
+}
+
+.h_arrow {
+  margin-right: -6px;
+}
+
+.dp::before {
+  right: -32px;
+}
+
+/* Banner */
+
+.vs_box h1,
+.vs_box p {
+  font-family: "DroidArabicKufiRegular";
+}
+
+.gear > span {
+  font-family: "DroidArabicKufiRegular";
+}
+
+#expchallange,
+#expinovation {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+#pills-tab {
+  direction: rtl;
+}
+
+#g2 {
+  margin-right: 63px;
+}
+
+#g3 {
+  margin-right: 95px;
+}
+
+/* Top Button */
+
+#buttonTop {
+  left: 30px;
+  right: inherit;
+}
+
+/* Explore Challenges */
+
+.rotate {
+  transform: rotate(-180deg);
+}
