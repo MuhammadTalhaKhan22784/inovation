@@ -468,7 +468,7 @@ p {
 
 .vs_box > p {
   color: #4f96d8;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 2px;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
@@ -478,7 +478,7 @@ p {
   margin-top: -3rem;
   width: 600px;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #4f96d8;
 }
 
