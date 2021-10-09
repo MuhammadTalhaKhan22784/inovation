@@ -179,7 +179,7 @@ p {
 }
 
 .nav_logo {
-  margin-right: -46px !important;
+  /* margin-left: -46px !important; */
   z-index: 10002;
 }
 
@@ -210,6 +210,11 @@ p {
 .mb-search,
 .mb-logo {
   display: none !important;
+}
+
+.desk-logo {
+  position: absolute;
+  /* left: 20px; */
 }
 /* 
 .desk-lang {
@@ -468,7 +473,7 @@ p {
 
 .vs_box > p {
   color: #4f96d8;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
@@ -478,7 +483,7 @@ p {
   margin-top: -3rem;
   width: 600px;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #4f96d8;
 }
 
@@ -2062,9 +2067,9 @@ p {
 /* Media Queries */
 
 @media screen and (min-width: 1600px) {
-  .nav_logo {
+  /* .nav_logo {
     margin-right: -72px !important;
-  }
+  } */
   .h_logo {
     width: 150px;
     height: 150px;
@@ -2179,7 +2184,7 @@ p {
     display: none !important;
   } */
   .nav_container {
-    width: 100%;
+    width: 90%;
     min-height: 87px;
     display: flex;
     align-items: center;
@@ -2197,15 +2202,15 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 60px;
     /* direction: ltr; */
   }
   .co_dropdwn h2 {
     margin: 0;
   }
   .h_logo {
-    width: 70px;
-    height: 70px;
+    width: 87px;
+    height: 87px;
+    /* margin-left: -60px; */
   }
   .menu_toggle {
     right: unset;
@@ -2224,9 +2229,9 @@ p {
   .desk-search {
     display: none !important;
   }
-  .nav_logo {
+  /* .nav_logo {
     margin-right: 0 !important;
-  }
+  } */
   .desk_harrow {
     display: none !important;
   }
@@ -2242,9 +2247,9 @@ p {
     font-size: 1.1rem;
     padding: 10px 0;
   }
-  .fa-search {
+  /* .fa-search {
     color: white;
-  }
+  } */
   .mb_h_arrow {
     display: block !important;
     font-size: 10px;
@@ -2270,6 +2275,7 @@ p {
     flex-direction: column;
     margin: 9px 0 !important;
     height: 100% !important;
+    align-items: flex-start;
     height: 67px;
     width: 100%;
   }
@@ -2291,15 +2297,16 @@ p {
   .navbar-nav .cd_5 {
     top: 388px;
   }
-  .custom_navbar .search_dropdwn {
+  /* .custom_navbar .search_dropdwn {
     top: 92px;
     position: absolute !important;
-  }
+  } */
   .menu_toggle {
     display: block;
     position: absolute;
     top: 32px;
-    right: 30px;
+    left: unset;
+    right: 36px;
   }
   #open_menu {
     display: block;
@@ -2321,12 +2328,12 @@ p {
   /* .desk-lang {
     display: none;
   } */
-  .mb-lang {
+  /* .mb-lang {
     position: absolute;
     display: block;
     top: -58px;
     right: 96px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1216px) {
@@ -2448,6 +2455,7 @@ p {
 @media screen and (max-width: 991px) {
   .navbar-nav .dropdown-menu {
     position: absolute;
+    border: none;
   }
   /* .h_arrow {
     margin-left: -7px !important;
@@ -2655,6 +2663,9 @@ p {
   .latest_challenges > div .col-lg-4 {
     width: 100%;
   }
+  .h_logo {
+    /* margin-left: -40px; */
+  }
 }
 
 @media screen and (max-width: 608px) {
@@ -2779,9 +2790,38 @@ p {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .vsb_3 > div:nth-child(1) {
+    top: 30px;
+    left: 228px;
+  }
+  .vsb_3 > div:nth-child(2) {
+    left: 254px;
+    top: -96px;
+  }
+  .vsb_3 > div:nth-child(3) {
+    left: 365px;
+    top: -125px;
+  }
+  .vsb_3 > div:nth-child(4) {
+    left: 483px;
+    top: -102px;
+  }
+  .vsb_3 > div:nth-child(5) {
+    top: 16px;
+    left: 508px;
+  }
+  .vsb_3 > div > span:nth-of-type(1) {
+    line-height: 1;
+  }
+}
+
 @media screen and (max-width: 422px) {
   .custom_navbar .navbar-nav {
     width: 90%;
+  }
+  .nav_container {
+    width: 83%;
   }
   .vs_box p {
     font-size: 1rem;
@@ -2827,6 +2867,10 @@ p {
     font-size: 1rem;
     line-height: 1.6;
   }
+  .vsb_2 img {
+    width: 170px;
+    margin-top: -26px;
+  }
   .g1 span,
   .g2 span,
   .g3 span,
@@ -2838,16 +2882,13 @@ p {
     width: 70px;
     height: 70px;
   }
-  .vsb_3 > div > span:nth-of-type(1) {
-    line-height: 20px;
-  }
   .vsb_3 > div:nth-child(1) {
     top: 34px;
-    left: 243px;
+    left: 233px;
   }
   .vsb_3 > div:nth-child(5) {
     top: 14px;
-    left: 497px;
+    left: 508px;
   }
   .li_content {
     padding: 20px 10px 0 10px;

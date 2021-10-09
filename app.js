@@ -112,6 +112,10 @@ window.onload = function () {
 // Change language
 
 const nav_id = document.getElementById("navbar");
+const cus_nav = document.getElementById("cus_nav");
+const menu_toggle = document.querySelectorAll(".menu_toggle");
+const nav_logo = document.querySelector(".mb-logo");
+const desk_logo = document.querySelector(".desk-logo");
 const footer = document.getElementById("footer");
 const pillsTab = document.getElementById("pills-tab");
 const buttonTop = document.getElementById("buttonTop");
@@ -245,6 +249,18 @@ function HandleLanguage(e) {
 
     buttonTop.style.left = "30px";
     buttonTop.style.right = "inherit";
+
+    cus_nav.style.justifyContent = "flex-start";
+    for (let i = 0; i < menu_toggle.length; i++) {
+      menu_toggle[i].style.right = "unset";
+      menu_toggle[i].style.left = "36px";
+    }
+    nav_logo.style.marginRight = "-58px";
+    nav_logo.style.marginLeft = "initial";
+
+
+    desk_logo.style.left = "initial";
+    desk_logo.style.right = "20px";
 
     nav_id.style.direction = "rtl";
     nav_id.style.fontFamily = "DroidArabicKufiRegular";
@@ -437,6 +453,16 @@ function HandleLanguage(e) {
     n5.style.textAlign = "left";
     n6.style.textAlign = "left";
     n7.style.textAlign = "left";
+    cus_nav.style.justifyContent = "flex-end";
+    for (let i = 0; i < menu_toggle.length; i++) {
+      menu_toggle[i].style.right = "36px";
+      menu_toggle[i].style.left = "unset";
+    }
+    nav_logo.style.marginRight = "0";
+    nav_logo.style.marginLeft = "-58px";
+
+    desk_logo.style.left = "20px";
+    desk_logo.style.right = "initial";
 
     nav_id.style.direction = "ltr";
     nav_id.style.fontFamily = "sans-serif";
