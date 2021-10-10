@@ -460,7 +460,7 @@ p {
   display: flex;
   height: -webkit-max-content;
   height: -moz-max-content;
-  height: 86vh;
+  height: 100%;
   padding: 2rem 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2165,12 +2165,6 @@ p {
   }
   .vsb_3 {
     margin-top: 29px;
-  }
-}
-
-@media screen and (max-width: 1340px) {
-  .vs_box {
-    height: 100vh;
   }
 }
 
