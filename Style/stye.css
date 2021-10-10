@@ -2168,6 +2168,12 @@ p {
   }
 }
 
+@media screen and (max-width: 1340px) {
+  .vs_box {
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 1262px) {
   .latest_innovation > div,
   .latest_challenges > div {
