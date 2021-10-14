@@ -543,6 +543,7 @@ p {
   -o-object-fit: contain;
   object-fit: contain;
   width: 250px;
+  height: 100%;
 }
 
 .vsb_3 {
@@ -712,23 +713,23 @@ p {
 }
 
 .vsb_4img1 {
-  background-image: url("../Assets/Images/11a.png");
+  background-image: url("../Assets/Icons/inovation\ edge.svg");
 }
 
 .vsb_4img2 {
-  background-image: url("../Assets/Images/22a.png");
+  background-image: url("../Assets/Icons/inovation\ edge1.svg");
 }
 
 .vsb_4img3 {
-  background-image: url("../Assets/Images/33a.png");
+  background-image: url("../Assets/Icons/inovation\ edge3.svg");
 }
 
 .vsb_4img4 {
-  background-image: url("../Assets/Images/44a.png");
+  background-image: url("../Assets/Icons/inovation\ edge2.svg");
 }
 
 .vsb_4img5 {
-  background-image: url("../Assets/Images/2aa.png");
+  background-image: url("../Assets/Icons/inovation\ edge4.svg");
 }
 
 /* latest challenges */
