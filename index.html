@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Favicon -->
     <link rel="icon" href="Assets/Icons/favicon.ico" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
 
     <!-- font awesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
 
     <!-- swiper CDN -->
     <!-- 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="swiper/css/pagination"> -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!-- animation cdn -->
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/droid-arabic-kufi" type="text/css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/droid-arabic-kufi"
+      type="text/css"
+    />
 
     <!-- style.css -->
     <link rel="stylesheet" href="Style/stye.css" />
     <title>Innovation Oases</title>
 
     <style>
-        .swiper-pagination2,
-        .swiper-pagination1 {
-            text-align: center;
-            /* background-color: burlywood; */
-        }
+      .swiper-pagination2,
+      .swiper-pagination1 {
+        text-align: center;
+        /* background-color: burlywood; */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HEADER START -->
 
-    <nav id="cus_nav" class="custom_navbar navbar navbar-expand-lg navbar-light">
-        <a class="nav_logo desk-logo" href="#"><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo" /></a>
+    <nav
+      id="cus_nav"
+      class="custom_navbar navbar navbar-expand-lg navbar-light"
+    >
+      <a class="nav_logo desk-logo" href="#"
+        ><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo"
+      /></a>
 
-        <div id="navbar" class="nav_container">
-            <div>
-                <div>
-                    <button id="open_menu" class="menu_toggle" onclick="openNavbar()">
+      <div id="navbar" class="nav_container">
+        <div>
+          <div>
+            <button id="open_menu" class="menu_toggle" onclick="openNavbar()">
               <img src="Assets/Icons/menu.png" alt="" />
             </button>
-                    <button id="close_menu" class="menu_toggle" onclick="closeNavbar()">
+            <button id="close_menu" class="menu_toggle" onclick="closeNavbar()">
               <img src="Assets/Icons/cancel.png" alt="" />
             </button>
-                    <a class="nav_logo mb-logo" href="#"><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo" /></a>
-                </div>
-                <!-- <div class="nav-item mb-search">
+            <a class="nav_logo mb-logo" href="#"
+              ><img class="h_logo" src="Assets/Icons/main_logo.svg" alt="logo"
+            /></a>
+          </div>
+          <!-- <div class="nav-item mb-search">
             <a class="nav-link"><i class="fas fa-search"></i></a>
 
             <div class="dropdown-menu search_dropdwn">
@@ -67,403 +91,476 @@
               </div>
             </div>
           </div> -->
-            </div>
+        </div>
 
-            <div class="navbar-collapse">
-                <ul id="nav_menu" class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li>
-                        <a id="n1" class="nav-link active" aria-current="page" href="#">Home</a
+        <div class="navbar-collapse">
+          <ul id="nav_menu" class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li>
+              <a id="n1" class="toggle_c nav-link active" aria-current="page" href="#"
+                >Home</a
               >
             </li>
             <li class="nav-item d-flex align-items-center">
               <div class="n_menu">
                 <a id="n2" class="nav-link" href="#">Challenges Oasis</a>
-                        <img class="h_arrow" src="Assets/Images/down-arrow.svg" alt="..." />
-                        <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
-            </div>
-            <div class="dropdown-menu co_dropdwn cd_1">
+                <img
+                  class="h_arrow"
+                  src="Assets/Images/down-arrow.svg"
+                  alt="..."
+                />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu co_dropdwn cd_1">
                 <div class="container">
-                    <div class="row gy-4">
-                        <div class="
+                  <div class="row gy-4">
+                    <div
+                      class="
                         col-12 col-sm-12 col-md-12 col-lg-3
                         d-flex
                         align-items-center
-                      ">
-                            <div>
-                                <i class="fas fa-mail-bulk"></i>
-                            </div>
-                            <div>
-                                <h2 id="d1-1">Post challenges</h2>
-                            </div>
-                        </div>
-                        <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                            <div>
-                                <i class="fas fa-search-minus"></i>
-                            </div>
-                            <div>
-                                <h2 id="d1-2">Explore & Solve challenges</h2>
-                            </div>
-                        </div>
-                        <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                            <div>
-                                <i class="fab fa-hackerrank"></i>
-                            </div>
-                            <div>
-                                <h2 id="d1-3">Join Hackathon</h2>
-                            </div>
-                        </div>
-                        <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                            <div>
-                                <i class="fas fa-clipboard-check"></i>
-                            </div>
-                            <div>
-                                <h2 id="d1-4">Success story</h2>
-                            </div>
-                        </div>
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-mail-bulk"></i>
+                      </div>
+                      <div>
+                        <h2 id="d1-1">Post challenges</h2>
+                      </div>
                     </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-search-minus"></i>
+                      </div>
+                      <div>
+                        <h2 id="d1-2">Explore & Solve challenges</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <i class="fab fa-hackerrank"></i>
+                      </div>
+                      <div>
+                        <h2 id="d1-3">Join Hackathon</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-clipboard-check"></i>
+                      </div>
+                      <div>
+                        <h2 id="d1-4">Success story</h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <div class="n_menu">
-                    <a id="n3" class="nav-link" href="#">Innovations Oasis</a>
-                    <img class="h_arrow" src="Assets/Images/down-arrow.svg" alt="..." />
-                    <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
-                </div>
-                <div class="dropdown-menu co_dropdwn cd_2">
-                    <div class="container">
-                        <div class="row gy-4">
-                            <div class="
+              <div class="n_menu">
+                <a id="n3" class="nav-link" href="#">Innovations Oasis</a>
+                <img
+                  class="h_arrow"
+                  src="Assets/Images/down-arrow.svg"
+                  alt="..."
+                />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu co_dropdwn cd_2">
+                <div class="container">
+                  <div class="row gy-4">
+                    <div
+                      class="
                         col-12 col-sm-12 col-md-12 col-lg-3
                         d-flex
                         align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-vote-yea"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d2-1">Accelerators</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-1">
-                                            Register for Acceleration Programs
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-2
-                        d-flex
-                        align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d2-2">Incubators</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-2">Register for incubators</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-start
-                      ">
-                                <div><i class="fas fa-user-alt"></i></div>
-                                <div>
-                                    <h2 id="d2-3">Mentors</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-3">Find Mentors</p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-4">Register as a mentor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-2
-                        d-flex
-                        align-items-start
-                      ">
-                                <div><i class="fas fa-user-alt"></i></div>
-                                <div>
-                                    <h2 id="d2-4">Training</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-5">Find training Programs</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-2
-                        d-flex
-                        align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d2-5">E-learning</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d2p-6">Find courses</p>
-                                    </div>
-                                </div>
-                            </div>
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-vote-yea"></i>
+                      </div>
+                      <div>
+                        <h2 id="d2-1">Accelerators</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-1">
+                            Register for Acceleration Programs
+                          </p>
                         </div>
+                      </div>
                     </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-2
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-handshake"></i>
+                      </div>
+                      <div>
+                        <h2 id="d2-2">Incubators</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-2">Register for incubators</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div><i class="fas fa-user-alt"></i></div>
+                      <div>
+                        <h2 id="d2-3">Mentors</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-3">Find Mentors</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-4">Register as a mentor</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-2
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div><i class="fas fa-user-alt"></i></div>
+                      <div>
+                        <h2 id="d2-4">Training</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-5">Find training Programs</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-2
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                      </div>
+                      <div>
+                        <h2 id="d2-5">E-learning</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d2p-6">Find courses</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <div class="n_menu">
-                    <a id="n4" class="nav-link" href="#">Investments Oasis</a>
-                    <img class="h_arrow" src="Assets/Images/down-arrow.svg" alt="" />
-                    <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
-                </div>
-                <div class="dropdown-menu co_dropdwn cd_3">
-                    <div class="container">
-                        <div class="row gy-4">
-                            <div class="
+              <div class="n_menu">
+                <a id="n4" class="nav-link" href="#">Investments Oasis</a>
+                <img
+                  class="h_arrow"
+                  src="Assets/Images/down-arrow.svg"
+                  alt=""
+                />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu co_dropdwn cd_3">
+                <div class="container">
+                  <div class="row gy-4">
+                    <div
+                      class="
                         col-12 col-sm-12 col-md-12 col-lg-3
                         d-flex
                         align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-warehouse"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d3-1">Investors</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d3p-1">Register as investors</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-money-check-alt"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d3-2">Investments</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d3p-2">
-                                            Search for investment opportunities
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-business-time"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d3-3">Start-ups</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d3p-3">
-                                            Find & Invest on the best start-ups
-                                        </p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d3p-4">Register your start-ups</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-start
-                      ">
-                                <div>
-                                    <i class="fas fa-donate"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d3-4">Funding</h2>
-                                    <div class="d-flex align-items-center">
-                                        <p class="dp" id="d3p-5">
-                                            Funding to bring creative project to life
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-warehouse"></i>
+                      </div>
+                      <div>
+                        <h2 id="d3-1">Investors</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d3p-1">Register as investors</p>
                         </div>
+                      </div>
                     </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-money-check-alt"></i>
+                      </div>
+                      <div>
+                        <h2 id="d3-2">Investments</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d3p-2">
+                            Search for investment opportunities
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-business-time"></i>
+                      </div>
+                      <div>
+                        <h2 id="d3-3">Start-ups</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d3p-3">
+                            Find & Invest on the best start-ups
+                          </p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d3p-4">Register your start-ups</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-start
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-donate"></i>
+                      </div>
+                      <div>
+                        <h2 id="d3-4">Funding</h2>
+                        <div class="d-flex align-items-center">
+                          <p class="dp" id="d3p-5">
+                            Funding to bring creative project to life
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <div class="n_menu">
-                    <a id="n5" class="nav-link" href="#">Build your team</a>
-                    <img class="h_arrow" src="Assets/Images/down-arrow.svg" alt="" />
-                    <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
-                </div>
-                <div class="dropdown-menu co_dropdwn cd_4">
-                    <div class="container">
-                        <div class="row gy-4">
-                            <div class="
+              <div class="n_menu">
+                <a id="n5" class="nav-link" href="#">Build your team</a>
+                <img
+                  class="h_arrow"
+                  src="Assets/Images/down-arrow.svg"
+                  alt=""
+                />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu co_dropdwn cd_4">
+                <div class="container">
+                  <div class="row gy-4">
+                    <div
+                      class="
                         col-12 col-sm-12 col-md-12 col-lg-3
                         d-flex
                         align-items-center
-                      ">
-                                <div>
-                                    <i class="fas fa-fist-raised"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d4_1">Talent register</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                                <div>
-                                    <img src="Assets/Images/star (1).svg" alt="" />
-                                </div>
-                                <div>
-                                    <h2 id="d4_2">Find top talent</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                                <div>
-                                    <img src="Assets/Images/shuttle (1).svg" alt="" />
-                                </div>
-                                <div>
-                                    <h2 id="d4_3">Find top startups</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                                <div>
-                                    <img src="Assets/Images/interview (1).svg" alt="" />
-                                </div>
-                                <div>
-                                    <h2 id="d4_4">Request talents</h2>
-                                </div>
-                            </div>
-                        </div>
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-fist-raised"></i>
+                      </div>
+                      <div>
+                        <h2 id="d4_1">Talent register</h2>
+                      </div>
                     </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <img src="Assets/Images/star (1).svg" alt="" />
+                      </div>
+                      <div>
+                        <h2 id="d4_2">Find top talent</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <img src="Assets/Images/shuttle (1).svg" alt="" />
+                      </div>
+                      <div>
+                        <h2 id="d4_3">Find top startups</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <img src="Assets/Images/interview (1).svg" alt="" />
+                      </div>
+                      <div>
+                        <h2 id="d4_4">Request talents</h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <div class="n_menu">
-                    <a id="n6" class="nav-link" href="#">Events</a>
-                    <img class="h_arrow desk_h_arrow" src="Assets/Images/down-arrow.svg" alt="" />
-                    <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
-                </div>
-                <div class="dropdown-menu co_dropdwn cd_5">
-                    <div class="container">
-                        <div class="row gy-2">
-                            <div class="
+              <div class="n_menu">
+                <a id="n6" class="nav-link" href="#">Events</a>
+                <img
+                  class="h_arrow desk_h_arrow"
+                  src="Assets/Images/down-arrow.svg"
+                  alt=""
+                />
+                <i class="h_arrow mb_h_arrow fa fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu co_dropdwn cd_5">
+                <div class="container">
+                  <div class="row gy-2">
+                    <div
+                      class="
                         col-12 col-sm-12 col-md-12 col-lg-2
                         d-flex
                         align-items-center
-                      ">
-                                <div><i class="far fa-newspaper"></i></div>
-                                <div>
-                                    <h2 id="d5_1">News</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-2
-                        d-flex
-                        align-items-center
-                      ">
-                                <div><i class="far fa-calendar-alt"></i></div>
-                                <div>
-                                    <h2 id="d5_2">Upcoming event</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-2
-                        d-flex
-                        align-items-center
-                      ">
-                                <div><i class="fas fa-calendar-check"></i></div>
-                                <div>
-                                    <h2 id="d5_3">Past event</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                                <div>
-                                    <i class="far fa-folder"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d5_4">Customized Events Contact Us Directly</h2>
-                                </div>
-                            </div>
-                            <div class="
-                        col-12 col-sm-12 col-md-12 col-lg-3
-                        d-flex
-                        align-items-center
-                      ">
-                                <div>
-                                    <i class="fas fa-users-cog"></i>
-                                </div>
-                                <div>
-                                    <h2 id="d5_5">
-                                        Customized Meetings Contact Us Directly
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
+                      "
+                    >
+                      <div><i class="far fa-newspaper"></i></div>
+                      <div>
+                        <h2 id="d5_1">News</h2>
+                      </div>
                     </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-2
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div><i class="far fa-calendar-alt"></i></div>
+                      <div>
+                        <h2 id="d5_2">Upcoming event</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-2
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div><i class="fas fa-calendar-check"></i></div>
+                      <div>
+                        <h2 id="d5_3">Past event</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <i class="far fa-folder"></i>
+                      </div>
+                      <div>
+                        <h2 id="d5_4">Customized Events Contact Us Directly</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        col-12 col-sm-12 col-md-12 col-lg-3
+                        d-flex
+                        align-items-center
+                      "
+                    >
+                      <div>
+                        <i class="fas fa-users-cog"></i>
+                      </div>
+                      <div>
+                        <h2 id="d5_5">
+                          Customized Meetings Contact Us Directly
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </li>
 
             <li class="nav-item">
-                <a class="n_menu nav-link"><i class="fas fa-search"></i></a>
+              <a class="n_menu nav-link"><i class="fas fa-search"></i></a>
 
-                <div class="dropdown-menu search_dropdwn">
-                    <div class="search_input">
-                        <input type="text" placeholder="Search" />
-                        <i class="fas fa-search"></i>
-                    </div>
+              <div class="dropdown-menu search_dropdwn">
+                <div class="search_input">
+                  <input type="text" placeholder="Search" />
+                  <i class="fas fa-search"></i>
                 </div>
+              </div>
             </li>
             <li>
-                <button id="n7" class="form_btn">Register / Login</button>
+              <button id="n7" class="toggle_c form_btn">Register / Login</button>
             </li>
 
             <div class="mb-lang">
-                <button id="engLng" class="lang-btn d-none" onclick="HandleLanguage('english')">
+              <button
+                id="engLng"
+                class="toggle_c lang-btn d-none"
+                onclick="HandleLanguage('english')"
+              >
                 Arabic
               </button>
 
-                <button id="arabicLng" class="lang-btn d-none" onclick="HandleLanguage('urdu')">
+              <button
+                id="arabicLng"
+                class="toggle_c lang-btn d-none"
+                onclick="HandleLanguage('urdu')"
+              >
                 English
               </button>
             </div>
-            </ul>
+          </ul>
         </div>
-        </div>
+      </div>
     </nav>
 
     <!-- HEADER END -->
@@ -471,216 +568,275 @@
 
     <!-- BANNER START -->
     <section id="home" class="banner_hero">
-        <div class="vs_box">
-            <p id="h1" class="mb-1 mt-1" data-aos="fade-down" data-aos-delay="1060" data-aos-duration="1000">
-                Collaboration is the key to speeding up innovation
-            </p>
-            <div>
-                <div class="vsb_3">
-                    <div class="gear">
-                        <span id="ge1">Government</span>
-                        <div class="g1 position-relative">
-                            <div class="stats vsb_4img1"></div>
-                            <span>350</span>
-                        </div>
-                    </div>
-                    <div class="gear">
-                        <span id="ge2">Investors</span>
-                        <div id="g2" class="g2 position-relative">
-                            <div class="stats vsb_4img2"></div>
-                            <span>57</span>
-                        </div>
-                    </div>
-                    <div class="gear">
-                        <span id="ge3">Startups</span>
-                        <div id="g3" class="g3 position-relative">
-                            <div class="stats vsb_4img3"></div>
-                            <span>10</span>
-                        </div>
-                    </div>
-                    <div class="gear">
-                        <span id="ge4">Innovators</span>
-                        <div class="g4 position-relative">
-                            <div class="stats vsb_4img4"></div>
-                            <span>60</span>
-                        </div>
-                    </div>
-                    <div class="gear">
-                        <span id="ge5">
+      <div class="vs_box">
+        <p
+          id="h1"
+          class="mb-1 mt-1"
+          data-aos="fade-down"
+          data-aos-delay="1060"
+          data-aos-duration="1000"
+        >
+          Collaboration is the key to speeding up innovation
+        </p>
+        <div>
+          <div class="vsb_3">
+            <div class="gear">
+              <span id="ge1">Government</span>
+              <div class="g1 position-relative">
+                <div class="stats vsb_4img1"></div>
+                <span>350</span>
+              </div>
+            </div>
+            <div class="gear">
+              <span id="ge2">Investors</span>
+              <div id="g2" class="g2 position-relative">
+                <div class="stats vsb_4img2"></div>
+                <span>57</span>
+              </div>
+            </div>
+            <div class="gear">
+              <span id="ge3">Startups</span>
+              <div id="g3" class="g3 position-relative">
+                <div class="stats vsb_4img3"></div>
+                <span>10</span>
+              </div>
+            </div>
+            <div class="gear">
+              <span id="ge4">Innovators</span>
+              <div class="g4 position-relative">
+                <div class="stats vsb_4img4"></div>
+                <span>60</span>
+              </div>
+            </div>
+            <div class="gear">
+              <span id="ge5">
                 Academic <br />
                 sectors
               </span>
-                        <div class="g5 position-relative">
-                            <div class="stats vsb_4img5"></div>
-                            <span>16</span>
-                        </div>
-                    </div>
-                </div>
+              <div class="g5 position-relative">
+                <div class="stats vsb_4img5"></div>
+                <span>16</span>
+              </div>
+            </div>
+          </div>
 
-                <!-- <div class="vsb_2" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000"> -->
-                <div class="vsb_2">
-                    <img src="Assets/Images/logo (5).png" alt="..." />
-                </div>
-                <img class="vs_video" src="Assets/video/Final.gif" alt="..." />
-                <!-- <video class="vs_video" width="500" height="340" preload="yes" autoplay playsinline loop muted>
+          <!-- <div class="vsb_2" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000"> -->
+          <div class="vsb_2">
+            <img src="Assets/Images/logo (5).png" alt="..." />
+          </div>
+          <img class="vs_video" src="Assets/video/Final.gif" alt="..." />
+          <!-- <video class="vs_video" width="500" height="340" preload="yes" autoplay playsinline loop muted>
                     <source src="Assets/video/webm.webm" type="video/webm">
                 </video> -->
-            </div>
-            `
-            <p id="h2">
-                The Digital Innovation Oases connects startups with public and private sectors to transform ideas to products or services
-            </p>
         </div>
+        `
+        <p id="h2">
+          The Digital Innovation Oases connects startups with public and private
+          sectors to transform ideas to products or services
+        </p>
+      </div>
     </section>
     <!-- BANNER END -->
 
     <!-- LATEST CHALLENGES START -->
     <section class="latest_challenges">
-        <h1 id="lc" data-aos="zoom-in" data-aos-delay="1060" data-aos-duration="1000">
-            Latest challenges
-        </h1>
-        <hr class="c_hr" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000" />
-        <div>
-            <div class="row gy-5">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="lc_card">
-                        <div class="lc_timg lc_timg2 lc_timg1">
-                            <img src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png" alt="..." />
-                        </div>
-                        <div class="lc_content">
-                            <div class="lc_1">
-                                <span>By Bureau of Reclamation</span>
-                                <span>356<i class="far fa-star follow-follow ms-2"></i></span>
-                            </div>
-                            <div class="lc_2">
-                                <h2>Water America's Crops Challenge</h2>
-                            </div>
-                            <div class="lc_3">
-                                <p>
-                                    Help us improve the reliability of water delivery for America’s crops by advancing methods to reduce water seepage in canals.
-                                </p>
-                            </div>
-
-                            <div class="lc_4">
-                                <div><i class="fas fa-map-marker-alt"></i> location</div>
-                                <span>360K RO Prize</span>
-                            </div>
-                        </div>
-                        <div class="lc_6">
-                            <strong><i class="fas fa-calendar-alt"></i>Join 528 Days Left
-                </strong>
-                            <span>24 Solutions</span>
-                        </div>
-                    </div>
+      <h1
+        id="lc"
+        data-aos="zoom-in"
+        data-aos-delay="1060"
+        data-aos-duration="1000"
+      >
+        Latest challenges
+      </h1>
+      <hr
+        class="c_hr"
+        data-aos="fade-up"
+        data-aos-delay="900"
+        data-aos-duration="1000"
+      />
+      <div>
+        <div class="row gy-5">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="lc_card">
+              <div class="lc_timg lc_timg2 lc_timg1">
+                <img
+                  src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png"
+                  alt="..."
+                />
+              </div>
+              <div class="lc_content">
+                <div class="lc_1">
+                  <span>By Bureau of Reclamation</span>
+                  <span>356<i class="far fa-star follow-follow ms-2"></i></span>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="lc_card">
-                        <div class="lc_timg lc_timg3 lc_timg2">
-                            <img src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png" alt="..." />
-                        </div>
-                        <div class="lc_content">
-                            <div class="lc_1">
-                                <span>By Bureau of Reclamation</span>
-                                <span>356<i class="far fa-star follow-follow ms-2"></i></span>
-                            </div>
-                            <div class="lc_2">
-                                <h2>Water America's Crops Challenge</h2>
-                            </div>
-                            <div class="lc_3">
-                                <p>
-                                    Help us improve the reliability of water delivery for America’s crops by advancing methods to reduce water seepage in canals.
-                                </p>
-                            </div>
-
-                            <div class="lc_4">
-                                <div><i class="fas fa-map-marker-alt"></i> location</div>
-                                <span>360K RO Prize</span>
-                            </div>
-                        </div>
-                        <div class="lc_6">
-                            <strong><i class="fas fa-calendar-alt"></i>Join 528 Days Left
-                </strong>
-                            <span>24 Solutions</span>
-                        </div>
-                    </div>
+                <div class="lc_2">
+                  <h2>Water America's Crops Challenge</h2>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="lc_card">
-                        <div class="lc_timg lc_timg3">
-                            <img src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png" alt="..." />
-                        </div>
-                        <div class="lc_content">
-                            <div class="lc_1">
-                                <span>By Bureau of Reclamation</span>
-                                <span>356<i class="far fa-star follow-follow ms-2"></i></span>
-                            </div>
-                            <div class="lc_2">
-                                <h2>Water America's Crops Challenge</h2>
-                            </div>
-                            <div class="lc_3">
-                                <p>
-                                    Help us improve the reliability of water delivery for America’s crops by advancing methods to reduce water seepage in canals.
-                                </p>
-                            </div>
-
-                            <div class="lc_4">
-                                <div><i class="fas fa-map-marker-alt"></i> location</div>
-                                <span>360K RO Prize</span>
-                            </div>
-                        </div>
-                        <div class="lc_6">
-                            <strong><i class="fas fa-calendar-alt"></i>Join 528 Days Left
-                </strong>
-                            <span>24 Solutions</span>
-                        </div>
-                    </div>
+                <div class="lc_3">
+                  <p>
+                    Help us improve the reliability of water delivery for
+                    America’s crops by advancing methods to reduce water seepage
+                    in canals.
+                  </p>
                 </div>
+
+                <div class="lc_4">
+                  <div><i class="fas fa-map-marker-alt"></i> location</div>
+                  <span>360K RO Prize</span>
+                </div>
+              </div>
+              <div class="lc_6">
+                <strong
+                  ><i class="fas fa-calendar-alt"></i>Join 528 Days Left
+                </strong>
+                <span>24 Solutions</span>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="lc_card">
+              <div class="lc_timg lc_timg3 lc_timg2">
+                <img
+                  src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png"
+                  alt="..."
+                />
+              </div>
+              <div class="lc_content">
+                <div class="lc_1">
+                  <span>By Bureau of Reclamation</span>
+                  <span>356<i class="far fa-star follow-follow ms-2"></i></span>
+                </div>
+                <div class="lc_2">
+                  <h2>Water America's Crops Challenge</h2>
+                </div>
+                <div class="lc_3">
+                  <p>
+                    Help us improve the reliability of water delivery for
+                    America’s crops by advancing methods to reduce water seepage
+                    in canals.
+                  </p>
+                </div>
+
+                <div class="lc_4">
+                  <div><i class="fas fa-map-marker-alt"></i> location</div>
+                  <span>360K RO Prize</span>
+                </div>
+              </div>
+              <div class="lc_6">
+                <strong
+                  ><i class="fas fa-calendar-alt"></i>Join 528 Days Left
+                </strong>
+                <span>24 Solutions</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="lc_card">
+              <div class="lc_timg lc_timg3">
+                <img
+                  src="https://d253pvgap36xx8.cloudfront.net/groups/logo_thumbnail/fe19ee8c9edb11ebae249e170ed4b798/22a0edd6fcdb11e9807c126fedbd2c23.png"
+                  alt="..."
+                />
+              </div>
+              <div class="lc_content">
+                <div class="lc_1">
+                  <span>By Bureau of Reclamation</span>
+                  <span>356<i class="far fa-star follow-follow ms-2"></i></span>
+                </div>
+                <div class="lc_2">
+                  <h2>Water America's Crops Challenge</h2>
+                </div>
+                <div class="lc_3">
+                  <p>
+                    Help us improve the reliability of water delivery for
+                    America’s crops by advancing methods to reduce water seepage
+                    in canals.
+                  </p>
+                </div>
+
+                <div class="lc_4">
+                  <div><i class="fas fa-map-marker-alt"></i> location</div>
+                  <span>360K RO Prize</span>
+                </div>
+              </div>
+              <div class="lc_6">
+                <strong
+                  ><i class="fas fa-calendar-alt"></i>Join 528 Days Left
+                </strong>
+                <span>24 Solutions</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="expchallange" class="explore-text">
-            <h2 id="ec">Explore Challenges</h2>
-            <svg class="rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="46" viewBox="0 0 24 46">
+      </div>
+      <div id="expchallange" class="explore-text">
+        <h2 id="ec">Explore Challenges</h2>
+        <svg
+          class="rotate"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="46"
+          viewBox="0 0 24 46"
+        >
           <path
             fill="#ffb800"
             d="M.77.156l10.174 22.652L.77 45.844l22.46-23.036z"
           ></path>
         </svg>
-        </div>
+      </div>
     </section>
     <!-- LATEST CHALLENGES END -->
 
     <!-- LATEST INNOVATION START -->
     <section class="latest_innovation position-relative">
-        <h1 id="l_ino" data-aos="zoom-in" data-aos-delay="1060" data-aos-duration="1000">
-            Latest innovations
-        </h1>
-        <hr class="c_hr" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000" />
-        <div>
-            <div class="row gy-5">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                    <div class="li_card">
-                        <div class="lc_top">
-                            <img src="./Assets/Images/cardimg4.png" alt="..." />
-                            <div class="lc_circle_img">
-                                <div class="lc_top_content">
-                                    <h2>IAN BALINA</h2>
-                                    <span>Cheif Executive</span>
-                                    <p>
-                                        Ian Balina is a former IBM Watson Analytics evangelist. He has also built million dollar businesses from the ground up. Ian's appeared in The Wall Street Journal, Forbes, and CNBC for his work in crypto, investing, analytics, and entrepreneurship.
-                                    </p>
-                                </div>
-                                <img class="lc_circle_img" src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg" alt="" />
-                            </div>
-                        </div>
+      <h1
+        id="l_ino"
+        data-aos="zoom-in"
+        data-aos-delay="1060"
+        data-aos-duration="1000"
+      >
+        Latest innovations
+      </h1>
+      <hr
+        class="c_hr"
+        data-aos="fade-up"
+        data-aos-delay="900"
+        data-aos-duration="1000"
+      />
+      <div>
+        <div class="row gy-5">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="li_card">
+              <div class="lc_top">
+                <img src="./Assets/Images/cardimg4.png" alt="..." />
+                <div class="lc_circle_img">
+                  <div class="lc_top_content">
+                    <h2>IAN BALINA</h2>
+                    <span>Cheif Executive</span>
+                    <p>
+                      Ian Balina is a former IBM Watson Analytics evangelist. He
+                      has also built million dollar businesses from the ground
+                      up. Ian's appeared in The Wall Street Journal, Forbes, and
+                      CNBC for his work in crypto, investing, analytics, and
+                      entrepreneurship.
+                    </p>
+                  </div>
+                  <img
+                    class="lc_circle_img"
+                    src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
 
-                        <div class="li_content">
-                            <div class="lic_1">
-                                <span><strong>CO FINANCING</strong></span>
-                            </div>
+              <div class="li_content">
+                <div class="lic_1">
+                  <span><strong>CO FINANCING</strong></span>
+                </div>
 
-                            <div class="lic_2">
-                                <h2>Hydrogen Solutions</h2>
-                                <i class="fa fa-map-marker">
+                <div class="lic_2">
+                  <h2>Hydrogen Solutions</h2>
+                  <i class="fa fa-map-marker">
                     <span>SchewenKirchen, DE</span></i
                   >
                 </div>
@@ -698,36 +854,45 @@
               </div>
               <div class="lc_6">
                 <strong
-                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528 Days Left
-                                </strong>
-                                <span>24 Investors</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="li_card">
-                            <div class="lc_top">
-                                <img src="./Assets/Images/cardimg5.png" alt="..." />
-                                <div class="lc_circle_img">
-                                    <div class="lc_top_content">
-                                        <h2>IAN BALINA</h2>
-                                        <span>Cheif Executive</span>
-                                        <p>
-                                            Ian Balina is a former IBM Watson Analytics evangelist. He has also built million dollar businesses from the ground up. Ian's appeared in The Wall Street Journal, Forbes, and CNBC for his work in crypto, investing, analytics, and entrepreneurship.
-                                        </p>
-                                    </div>
-                                    <img class="lc_circle_img" src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg" alt="" />
-                                </div>
-                            </div>
+                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528
+                  Days Left
+                </strong>
+                <span>24 Investors</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="li_card">
+              <div class="lc_top">
+                <img src="./Assets/Images/cardimg5.png" alt="..." />
+                <div class="lc_circle_img">
+                  <div class="lc_top_content">
+                    <h2>IAN BALINA</h2>
+                    <span>Cheif Executive</span>
+                    <p>
+                      Ian Balina is a former IBM Watson Analytics evangelist. He
+                      has also built million dollar businesses from the ground
+                      up. Ian's appeared in The Wall Street Journal, Forbes, and
+                      CNBC for his work in crypto, investing, analytics, and
+                      entrepreneurship.
+                    </p>
+                  </div>
+                  <img
+                    class="lc_circle_img"
+                    src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
 
-                            <div class="li_content">
-                                <div class="lic_1">
-                                    <span><strong>CO FINANCING</strong></span>
-                                </div>
+              <div class="li_content">
+                <div class="lic_1">
+                  <span><strong>CO FINANCING</strong></span>
+                </div>
 
-                                <div class="lic_2">
-                                    <h2>Hydrogen Solutions</h2>
-                                    <i class="fa fa-map-marker">
+                <div class="lic_2">
+                  <h2>Hydrogen Solutions</h2>
+                  <i class="fa fa-map-marker">
                     <span>SchewenKirchen, DE</span></i
                   >
                 </div>
@@ -745,36 +910,45 @@
               </div>
               <div class="lc_6">
                 <strong
-                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528 Days Left
-                                    </strong>
-                                    <span>24 Investors</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                            <div class="li_card">
-                                <div class="lc_top">
-                                    <img src="./Assets/Images/cardimg6.png" alt="..." />
-                                    <div class="lc_circle_img">
-                                        <div class="lc_top_content">
-                                            <h2>IAN BALINA</h2>
-                                            <span>Cheif Executive</span>
-                                            <p>
-                                                Ian Balina is a former IBM Watson Analytics evangelist. He has also built million dollar businesses from the ground up. Ian's appeared in The Wall Street Journal, Forbes, and CNBC for his work in crypto, investing, analytics, and entrepreneurship.
-                                            </p>
-                                        </div>
-                                        <img class="lc_circle_img" src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg" alt="" />
-                                    </div>
-                                </div>
+                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528
+                  Days Left
+                </strong>
+                <span>24 Investors</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="li_card">
+              <div class="lc_top">
+                <img src="./Assets/Images/cardimg6.png" alt="..." />
+                <div class="lc_circle_img">
+                  <div class="lc_top_content">
+                    <h2>IAN BALINA</h2>
+                    <span>Cheif Executive</span>
+                    <p>
+                      Ian Balina is a former IBM Watson Analytics evangelist. He
+                      has also built million dollar businesses from the ground
+                      up. Ian's appeared in The Wall Street Journal, Forbes, and
+                      CNBC for his work in crypto, investing, analytics, and
+                      entrepreneurship.
+                    </p>
+                  </div>
+                  <img
+                    class="lc_circle_img"
+                    src="https://dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/1130948/square_cropped_Ian_Balina_Headshot.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
 
-                                <div class="li_content">
-                                    <div class="lic_1">
-                                        <span><strong>CO FINANCING</strong></span>
-                                    </div>
+              <div class="li_content">
+                <div class="lic_1">
+                  <span><strong>CO FINANCING</strong></span>
+                </div>
 
-                                    <div class="lic_2">
-                                        <h2>Hydrogen Solutions</h2>
-                                        <i class="fa fa-map-marker">
+                <div class="lic_2">
+                  <h2>Hydrogen Solutions</h2>
+                  <i class="fa fa-map-marker">
                     <span>SchewenKirchen, DE</span></i
                   >
                 </div>
@@ -792,68 +966,101 @@
               </div>
               <div class="lc_6">
                 <strong
-                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528 Days Left
-                                        </strong>
-                                        <span>24 Investors</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="expinovation" class="explore-text">
-                        <h2 id="ei">Explore Innovation</h2>
-                        <svg class="rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="46" viewBox="0 0 24 46">
+                  ><i class="fas fa-calendar-alt"></i><a href="#">Join</a> 528
+                  Days Left
+                </strong>
+                <span>24 Investors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="expinovation" class="explore-text">
+        <h2 id="ei">Explore Innovation</h2>
+        <svg
+          class="rotate"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="46"
+          viewBox="0 0 24 46"
+        >
           <path
             fill="#ffb800"
             d="M.77.156l10.174 22.652L.77 45.844l22.46-23.036z"
           ></path>
         </svg>
-                    </div>
+      </div>
     </section>
     <!-- LATEST INNOVATION END -->
 
     <!-- NEWS & EVENTS START -->
     <div class="news_events_wrapper">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
             Latest News
           </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
             Upcomint Events
           </button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <section id="contact" class="upcoming-events">
-                    <div>
-                        <div class="
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <section id="contact" class="upcoming-events">
+            <div>
+              <div
+                class="
                   swiper-container
                   upcoming-container upcoming-container1
                   position-relative
-                ">
-                            <div class="swiper-button-prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <div class="swiper-button-next">
-                                <i class="fa fa-chevron-right"></i>
-                            </div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="ue-card">
-                                        <div class="ue-img">
-                                            <img src="./Assets/Images/news1.jpg" alt="" />
-                                        </div>
-                                        <div class="ue-content">
-                                            <div class="ue-status">
-                                                <div>
-                                                    <span>November 11,2020</span>
-                                                </div>
-                                            </div>
-                                            <strong>The Innovation Oases company Signed a memorandum of
+                "
+              >
+                <div class="swiper-button-prev">
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="ue-card">
+                      <div class="ue-img">
+                        <img src="./Assets/Images/news1.jpg" alt="" />
+                      </div>
+                      <div class="ue-content">
+                        <div class="ue-status">
+                          <div>
+                            <span>November 11,2020</span>
+                          </div>
+                        </div>
+                        <strong
+                          >The Innovation Oases company Signed a memorandum of
                           cooperation and partnership</strong
                         >
                         <p>
@@ -881,24 +1088,29 @@
                           >The Innovation Oases company held a meeting with the
                           Oman Investment Authority
                         </strong>
-                                            <p>
-                                                January 27,2021 The Innovation Oases company held a meeting with the Oman Investment Authority The innovation Oases and Oman association for the intellectual property held a meeting with the Oman Investment Authority with the
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ue-card">
-                                        <div class="ue-img">
-                                            <img src="./Assets/Images/news3.jpg" alt="" />
-                                        </div>
-                                        <div class="ue-content">
-                                            <div class="ue-status">
-                                                <div>
-                                                    <span>February 18,2021</span>
-                                                </div>
-                                            </div>
-                                            <strong>Announce the launch of the Artificial Intelligence
+                        <p>
+                          January 27,2021 The Innovation Oases company held a
+                          meeting with the Oman Investment Authority The
+                          innovation Oases and Oman association for the
+                          intellectual property held a meeting with the Oman
+                          Investment Authority with the
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ue-card">
+                      <div class="ue-img">
+                        <img src="./Assets/Images/news3.jpg" alt="" />
+                      </div>
+                      <div class="ue-content">
+                        <div class="ue-status">
+                          <div>
+                            <span>February 18,2021</span>
+                          </div>
+                        </div>
+                        <strong
+                          >Announce the launch of the Artificial Intelligence
                           and Intellectual Property Award</strong
                         >
                         <p>
@@ -972,24 +1184,29 @@
                           </div>
                         </div>
                         <strong>Announcement of the winning projects </strong>
-                                            <p>
-                                                News of the announcement of the winning projects in the Artificial Intelligence and Intellectual Property Competition. We have participated in the Artificial Intelligence and Intellectual Property Competition for the year 2021
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ue-card">
-                                        <div class="ue-img">
-                                            <img src="./Assets/Images/news5.jpg" alt="" />
-                                        </div>
-                                        <div class="ue-content">
-                                            <div class="ue-status">
-                                                <div>
-                                                    <span>April 7,2021</span>
-                                                </div>
-                                            </div>
-                                            <strong>The television interview with the third place winner
+                        <p>
+                          News of the announcement of the winning projects in
+                          the Artificial Intelligence and Intellectual Property
+                          Competition. We have participated in the Artificial
+                          Intelligence and Intellectual Property Competition for
+                          the year 2021
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ue-card">
+                      <div class="ue-img">
+                        <img src="./Assets/Images/news5.jpg" alt="" />
+                      </div>
+                      <div class="ue-content">
+                        <div class="ue-status">
+                          <div>
+                            <span>April 7,2021</span>
+                          </div>
+                        </div>
+                        <strong
+                          >The television interview with the third place winner
                           project that won the Artificial Intelligence and
                           Intellectual Property award</strong
                         >
@@ -1019,25 +1236,30 @@
                           workshop under the auspices of the World Intellectual
                           Property Organization
                         </strong>
-                                            <p>
-                                                April 8,2021 The Innovation Oases Company organized a virtual workshop under the auspices of the World Intellectual Property Organization The Innovation Oasis Company, in cooperation with the Omani Society for Intellectual Property, organized a virtual
-                                                workshop under the auspices of the World
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ue-card">
-                                        <div class="ue-img">
-                                            <img src="./Assets/Images/news6.jpg" alt="" />
-                                        </div>
-                                        <div class="ue-content">
-                                            <div class="ue-status">
-                                                <div>
-                                                    <span>April 8,2021</span>
-                                                </div>
-                                            </div>
-                                            <strong>A system to extinguish vehicles using artificial
+                        <p>
+                          April 8,2021 The Innovation Oases Company organized a
+                          virtual workshop under the auspices of the World
+                          Intellectual Property Organization The Innovation
+                          Oasis Company, in cooperation with the Omani Society
+                          for Intellectual Property, organized a virtual
+                          workshop under the auspices of the World
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ue-card">
+                      <div class="ue-img">
+                        <img src="./Assets/Images/news6.jpg" alt="" />
+                      </div>
+                      <div class="ue-content">
+                        <div class="ue-status">
+                          <div>
+                            <span>April 8,2021</span>
+                          </div>
+                        </div>
+                        <strong
+                          >A system to extinguish vehicles using artificial
                           intelligence technology</strong
                         >
                         <p>
@@ -1063,24 +1285,26 @@
                           </div>
                         </div>
                         <strong>A smart mask to safely screen people</strong>
-                                            <p>
-                                                A research team develops a smart mask to safely screen people
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ue-card">
-                                        <div class="ue-img">
-                                            <img src="./Assets/Images/news1.jpg" alt="" />
-                                        </div>
-                                        <div class="ue-content">
-                                            <div class="ue-status">
-                                                <div>
-                                                    <span>April 10,2021</span>
-                                                </div>
-                                            </div>
-                                            <strong>The Artificial Intelligence and Intellectual Property
+                        <p>
+                          A research team develops a smart mask to safely screen
+                          people
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="ue-card">
+                      <div class="ue-img">
+                        <img src="./Assets/Images/news1.jpg" alt="" />
+                      </div>
+                      <div class="ue-content">
+                        <div class="ue-status">
+                          <div>
+                            <span>April 10,2021</span>
+                          </div>
+                        </div>
+                        <strong
+                          >The Artificial Intelligence and Intellectual Property
                           award 2021</strong
                         >
                         <p>
