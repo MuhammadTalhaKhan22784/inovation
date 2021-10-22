@@ -2070,6 +2070,7 @@ p {
 .vs_video {
   width: 420px;
   height: 100%;
+  filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0.1, 0.1, 0.1, 0.1));
 }
 
 /* Media Queries */
