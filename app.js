@@ -95,10 +95,6 @@ window.onload = function () {
 
     touchPosDiff = touchStartPos - touchEndPos;
 
-    console.log(touchPosDiff);
-    console.log(touchStartPos);
-    console.log(touchEndPos);
-
     if (touchPosDiff > 0 + ignoreTouch) {
       testimLeftArrow.click();
     } else if (touchPosDiff < 0 - ignoreTouch) {
@@ -274,12 +270,6 @@ function HandleLanguage(e) {
     d3_3.innerHTML = "الشركات الناشئة";
     d3_4.innerHTML = "التمويل";
 
-    d3p_1.style.textAlign = "right";
-    d3p_2.style.textAlign = "right";
-    d3p_3.style.textAlign = "right";
-    d3p_4.style.textAlign = "right";
-    d3p_5.style.textAlign = "right";
-
     d3p_1.innerHTML = "سجل كمستثمر";
     d3p_2.innerHTML = "البحث عن فرص الاستثمار";
     d3p_3.innerHTML = "ابحث عن أفضل الشركات الناشئة واستثمر فيها";
@@ -341,18 +331,6 @@ function HandleLanguage(e) {
     engLng.classList.add("d-none");
     arabicLng.classList.remove("d-none");
     document.body.classList.remove("rtl");
-
-    for (let i = 0; i < rotate_arrow.length; i++) {
-      rotate_arrow[i].style.transform = "rotate(0deg)";
-    }
-
-    n1.style.textAlign = "left";
-    n2.style.textAlign = "left";
-    n3.style.textAlign = "left";
-    n4.style.textAlign = "left";
-    n5.style.textAlign = "left";
-    n6.style.textAlign = "left";
-    n7.style.textAlign = "left";
 
     n1.innerHTML = "Home";
     n2.innerHTML = "Challenges Oasis";
@@ -515,19 +493,17 @@ let collapse = document.querySelector(".navbar-collapse");
 // open navbar menu
 function openNavbar() {
   nav_menu.classList.add("mt_0");
-  close_menu.classList.add("d-block");
-  open_menu.classList.add = "d-none";
-  collapse.classList.add = "h_83";
+  close_menu.classList.add("d_block");
+  open_menu.classList.add("d_none");
+  collapse.classList.add("h_83");
 }
 // close navbar menu
 function closeNavbar() {
-  nav_menu.classList.add("mt_0");
-  close_menu.classList.add("d-block");
-  open_menu.classList.add = "d-none";
-  collapse.classList.add = "h_83";
+  nav_menu.classList.remove("mt_0");
 
-  nav_menu.style.marginTop = "mt-1000";
-  close_menu.style.display = "d-none";
-  open_menu.style.display = "d-block";
-  collapse.style.height = "h_unset";
+  close_menu.classList.remove("d_block");
+
+  open_menu.classList.remove("d_none");
+
+  collapse.classList.remove("h_83");
 }
