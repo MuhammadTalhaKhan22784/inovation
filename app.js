@@ -120,7 +120,6 @@ const footer = document.getElementById("footer");
 const pillsTab = document.getElementById("pills-tab");
 const buttonTop = document.getElementById("buttonTop");
 
-const ele = document.querySelectorAll(".dp");
 const rotate_arrow = document.querySelectorAll(".rotate");
 const gear2 = document.getElementById("g2");
 const gear3 = document.getElementById("g3");
@@ -237,53 +236,14 @@ function HandleLanguage(e) {
   if (getLang === "urdu") {
     engLng.classList.remove("d-none");
     arabicLng.classList.add("d-none");
+    document.body.classList.add("rtl");
 
-    for (let i = 0; i < ele.length; i++) {
-      ele[i].classList.add("test2");
-    }
-
-    pillsTab.style.direction = "rtl";
-
-    gear2.style.marginRight = "63px";
-    gear3.style.marginRight = "95px";
-
-    buttonTop.style.left = "30px";
-    buttonTop.style.right = "inherit";
-
-    cus_nav.style.justifyContent = "flex-start";
-    for (let i = 0; i < menu_toggle.length; i++) {
-      menu_toggle[i].style.right = "unset";
-      menu_toggle[i].style.left = "36px";
-    }
-    nav_logo.style.marginRight = "-58px";
-    nav_logo.style.marginLeft = "initial";
-
-    desk_logo.style.left = "initial";
-    desk_logo.style.right = "20px";
-
-    nav_id.style.direction = "rtl";
-    nav_id.style.fontFamily = "DroidArabicKufiRegular";
-    footer.style.direction = "rtl";
-    footer.style.fontFamily = "DroidArabicKufiRegular";
-    exp1.style.justifyContent = "flex-end";
-    exp1.style.flexDirection = "row-reverse";
-    exp2.style.justifyContent = "flex-end";
-    exp2.style.flexDirection = "row-reverse";
-
-    n1.style.textAlign = "right";
     n1.innerHTML = "القائمة الرئيسية";
-    n1.style.fontSize = "0.8rem";
-    n2.style.textAlign = "right";
     n2.innerHTML = "واحة التحديات ";
-    n3.style.textAlign = "right";
     n3.innerHTML = "واحة الإبتكارات";
-    n4.style.textAlign = "right";
     n4.innerHTML = "واحة الاستثمارات ";
-    n5.style.textAlign = "right";
     n5.innerHTML = "كوِّن فريقك";
-    n6.style.textAlign = "right";
     n6.innerHTML = "الفعاليات";
-    n7.style.textAlign = "right";
     n7.innerHTML = "إنشاء حساب  / تسجيل دخول";
 
     ge1.innerHTML = "الحكومة";
@@ -291,50 +251,23 @@ function HandleLanguage(e) {
     ge3.innerHTML = "الشركات الناشئة";
     ge4.innerHTML = "المبتكرين";
     ge5.innerHTML = "القطاعات <br>األكاديمية";
-
-    ge1.style.fontFamily = "DroidArabicKufiRegular";
-    ge2.style.fontFamily = "DroidArabicKufiRegular";
-    ge3.style.fontFamily = "DroidArabicKufiRegular";
-    ge4.style.fontFamily = "DroidArabicKufiRegular";
-    ge5.style.fontFamily = "DroidArabicKufiRegular";
-
-    d1_1.style.textAlign = "right";
     d1_1.innerHTML = "سجل التحدي";
-    d1_2.style.textAlign = "right";
     d1_2.innerHTML = "سجل حلول للتحديات";
-    d1_3.style.textAlign = "right";
     d1_3.innerHTML = "سجل في هاكثون";
-    d1_4.style.textAlign = "right";
     d1_4.innerHTML = "قصص نجاح";
 
-    d2_1.style.textAlign = "right";
     d2_1.innerHTML = "المسرعات";
-    d2_2.style.textAlign = "right";
     d2_2.innerHTML = "حاضنات";
-    d2_3.style.textAlign = "right";
     d2_3.innerHTML = "الموجهين";
-    d2_4.style.textAlign = "right";
     d2_4.innerHTML = "الدورات";
-    d2_5.style.textAlign = "right";
     d2_5.innerHTML = "التعلم الإلكتروني";
 
-    d2_p1.style.textAlign = "right";
     d2_p1.innerHTML = "سجل في برامج التسريع";
-    d2_p2.style.textAlign = "right";
     d2_p2.innerHTML = "سجل في الحاضنات";
-    d2_p3.style.textAlign = "right";
     d2_p3.innerHTML = "إبحث عن الموجه";
-    d2_p4.style.textAlign = "right";
     d2_p4.innerHTML = "سجل كموجه";
-    d2_p5.style.textAlign = "right";
     d2_p5.innerHTML = "البحث عن البرامج التدريبية المناسبة لأهدافك";
-    d2_p6.style.textAlign = "right";
     d2_p6.innerHTML = "البحث عن الدورات";
-
-    d3_1.style.textAlign = "right";
-    d3_2.style.textAlign = "right";
-    d3_3.style.textAlign = "right";
-    d3_4.style.textAlign = "right";
 
     d3_1.innerHTML = "المستثمرون";
     d3_2.innerHTML = "الاستثمارات";
@@ -353,21 +286,10 @@ function HandleLanguage(e) {
     d3p_4.innerHTML = "تسجيل الشركات الناشئة الخاصة بك";
     d3p_5.innerHTML = "تمويل المشاريع الإبتكارية";
 
-    d4_1.style.textAlign = "right";
-    d4_2.style.textAlign = "right";
-    d4_3.style.textAlign = "right";
-    d4_4.style.textAlign = "right";
-
     d4_1.innerHTML = "سجل مهاراتك";
     d4_2.innerHTML = "ابحث عن أفضل المواهب";
     d4_3.innerHTML = "البحث عن أفضل الشركات الناشئة";
     d4_4.innerHTML = "طلب مهارة";
-
-    d5_1.style.textAlign = "right";
-    d5_2.style.textAlign = "right";
-    d5_3.style.textAlign = "right";
-    d5_4.style.textAlign = "right";
-    d5_5.style.textAlign = "right";
 
     d5_1.innerHTML = "أخبار";
     d5_2.innerHTML = "الفعاليات القادمة ";
@@ -382,11 +304,9 @@ function HandleLanguage(e) {
     ec.innerHTML = "إستعرض التحديات";
 
     h1.innerHTML = "التعاون هو المفتاح لتسريع الابتكار";
-    h1.style.fontFamily = "DroidArabicKufiRegular";
 
     h2.innerHTML =
       "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
-    h2.style.fontFamily = "DroidArabicKufiRegular";
     copy_right.innerHTML = "واحات الإبتكار جميع الحقوق محفوظة";
     terms_text.innerHTML = "الشروط والأحكام";
     privacy_text.innerHTML = "سياسة الخصوصية";
@@ -417,29 +337,10 @@ function HandleLanguage(e) {
     news_letter.innerHTML = "اشترك في نشرتنا اإلخبارية";
     n_update.innerHTML = "ابق على اطالع بأحدث األخبار والفعاليات والمزيد";
     subs.innerHTML = "اإلشتراك";
-
-    for (let i = 0; i < h_arrow.length; i++) {
-      h_arrow[i].style.marginRight = "-6px";
-    }
-
-    for (let i = 0; i < nav_item.length; i++) {
-      nav_item[i].style.margin = "0 10px";
-    }
-
-    for (let i = 0; i < rotate_arrow.length; i++) {
-      rotate_arrow[i].style.transform = "rotate(-180deg)";
-    }
   } else {
     engLng.classList.add("d-none");
     arabicLng.classList.remove("d-none");
-
-    for (let i = 0; i < h_arrow.length; i++) {
-      h_arrow[i].style.marginLeft = "-17px";
-    }
-
-    for (let i = 0; i < nav_item.length; i++) {
-      nav_item[i].style.margin = "0 6px";
-    }
+    document.body.classList.remove("rtl");
 
     for (let i = 0; i < rotate_arrow.length; i++) {
       rotate_arrow[i].style.transform = "rotate(0deg)";
@@ -452,32 +353,6 @@ function HandleLanguage(e) {
     n5.style.textAlign = "left";
     n6.style.textAlign = "left";
     n7.style.textAlign = "left";
-    cus_nav.style.justifyContent = "flex-end";
-    for (let i = 0; i < menu_toggle.length; i++) {
-      menu_toggle[i].style.right = "36px";
-      menu_toggle[i].style.left = "unset";
-    }
-    nav_logo.style.marginRight = "0";
-    nav_logo.style.marginLeft = "-58px";
-
-    desk_logo.style.left = "20px";
-    desk_logo.style.right = "initial";
-
-    nav_id.style.direction = "ltr";
-    nav_id.style.fontFamily = "sans-serif";
-    footer.style.direction = "ltr";
-    footer.style.fontFamily = "sans-serif";
-
-    exp1.style.justifyContent = "flex-end";
-    exp1.style.flexDirection = "row";
-    exp2.style.justifyContent = "flex-end";
-    exp2.style.flexDirection = "row";
-
-    pillsTab.style.direction = "ltr";
-    gear2.style.marginRight = "0px";
-    gear3.style.marginRight = "0px";
-    buttonTop.style.right = "30px";
-    buttonTop.style.left = "inherit";
 
     n1.innerHTML = "Home";
     n2.innerHTML = "Challenges Oasis";
@@ -493,34 +368,16 @@ function HandleLanguage(e) {
     ge4.innerHTML = "Innovators";
     ge5.innerHTML = "Academic <br> sectors";
 
-    d1_1.style.textAlign = "left";
-    d1_2.style.textAlign = "left";
-    d1_3.style.textAlign = "left";
-    d1_4.style.textAlign = "left";
-
     d1_1.innerHTML = "Post challenges";
     d1_2.innerHTML = "Solve challenges";
     d1_3.innerHTML = "Join Hackathon";
     d1_4.innerHTML = "Success story";
-
-    d2_1.style.textAlign = "left";
-    d2_2.style.textAlign = "left";
-    d2_3.style.textAlign = "left";
-    d2_4.style.textAlign = "left";
-    d2_5.style.textAlign = "left";
 
     d2_1.innerHTML = "Accelerators";
     d2_2.innerHTML = "Incubators";
     d2_3.innerHTML = "Mentors";
     d2_4.innerHTML = "Training";
     d2_5.innerHTML = "E-learning";
-
-    d2_p1.style.textAlign = "left";
-    d2_p2.style.textAlign = "left";
-    d2_p3.style.textAlign = "left";
-    d2_p4.style.textAlign = "left";
-    d2_p5.style.textAlign = "left";
-    d2_p6.style.textAlign = "left";
 
     d2_p1.innerHTML = "Register for Acceleration Programs";
     d2_p2.innerHTML = "Register for incubators";
@@ -529,21 +386,10 @@ function HandleLanguage(e) {
     d2_p5.innerHTML = "Find training Programs";
     d2_p6.innerHTML = "Find courses";
 
-    d3_1.style.textAlign = "left";
-    d3_2.style.textAlign = "left";
-    d3_3.style.textAlign = "left";
-    d3_4.style.textAlign = "left";
-
     d3_1.innerHTML = "Investors";
     d3_2.innerHTML = "Investments";
     d3_3.innerHTML = "Start-ups";
     d3_4.innerHTML = "Funding";
-
-    d3p_1.style.textAlign = "left";
-    d3p_2.style.textAlign = "left";
-    d3p_3.style.textAlign = "left";
-    d3p_4.style.textAlign = "left";
-    d3p_5.style.textAlign = "left";
 
     d3p_1.innerHTML = "Register as investors";
     d3p_2.innerHTML = "Search for investment opportunities";
@@ -551,21 +397,10 @@ function HandleLanguage(e) {
     d3p_4.innerHTML = "Register your start-ups";
     d3p_5.innerHTML = "Funding to bring creative project to life";
 
-    d4_1.style.textAlign = "left";
-    d4_2.style.textAlign = "left";
-    d4_3.style.textAlign = "left";
-    d4_4.style.textAlign = "left";
-
     d4_1.innerHTML = "Talent register";
     d4_2.innerHTML = "Find top talent";
     d4_3.innerHTML = "Find top startups";
     d4_4.innerHTML = "Request talents";
-
-    d5_1.style.textAlign = "left";
-    d5_2.style.textAlign = "left";
-    d5_3.style.textAlign = "left";
-    d5_4.style.textAlign = "left";
-    d5_5.style.textAlign = "left";
 
     d5_1.innerHTML = "News";
     d5_2.innerHTML = "Upcoming event";
@@ -613,11 +448,6 @@ function HandleLanguage(e) {
     news_letter.innerHTML = "Subscribe to our NewsLetter";
     n_update.innerHTML = "Stay updated with our latest news, events and more.";
     subs.innerHTML = "Subscribe";
-    ge1.style.fontFamily = 'Roboto,"sans-serif"';
-    ge2.style.fontFamily = 'Roboto,"sans-serif"';
-    ge3.style.fontFamily = 'Roboto,"sans-serif"';
-    ge4.style.fontFamily = 'Roboto,"sans-serif"';
-    ge5.style.fontFamily = 'Roboto,"sans-serif"';
   }
 }
 HandleLanguage(getLang);
@@ -642,38 +472,6 @@ btn.on("click", function (e) {
 let navItemToggle = document.querySelectorAll(".n_menu");
 let nav_link = document.querySelectorAll(".dropdown-menu");
 let nav_s = document.querySelectorAll(".toggle_c");
-
-// navItemToggle.forEach((item, i) => {
-//   item.addEventListener("mouseover", () => {
-//     if (nav_link[i].classList.contains("d-show-")) {
-//       nav_link[i].classList.remove("d-show-");
-//       nav_link.forEach((val) => {
-//         val.classList.remove("d-show-");
-//       });
-//     } else {
-//       nav_link.forEach((val) => {
-//         val.classList.remove("d-show-");
-//       });
-//       nav_link[i].classList.add("d-show-");
-//     }
-//   });
-// });
-
-// navItemToggle.forEach((item, i) => {
-//     item.addEventListener("mouseout", () => {
-//       if (nav_link[i].classList.contains("d-show-")) {
-//         nav_link[i].classList.remove("d-show-");
-//         nav_link.forEach((val) => {
-//           val.classList.remove("d-show-");
-//         });
-//       } else {
-//         nav_link.forEach((val) => {
-//           val.classList.remove("d-show-");
-//         });
-//         nav_link[i].classList.add("d-show-");
-//       }
-//     });
-//   });
 
 navItemToggle.forEach((item, i) => {
   item.addEventListener("click", () => {
@@ -700,28 +498,12 @@ nav_s.forEach((item) => {
 });
 
 nav_s.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-      nav_link.forEach((val) => {
-        val.classList.remove("d-show-");
-      });
+  item.addEventListener("mouseover", () => {
+    nav_link.forEach((val) => {
+      val.classList.remove("d-show-");
     });
   });
-
-// navItemToggle.forEach((item, i) => {
-//   item.addEventListener("mouseout", () => {
-//     if (nav_link[i].classList.contains("d-show-")) {
-//       nav_link[i].classList.remove("d-show-");
-//       nav_link.forEach((val) => {
-//         val.classList.remove("d-show-");
-//       });
-//     } else {
-//       nav_link.forEach((val) => {
-//         val.classList.remove("d-show-");
-//       });
-//       nav_link[i].classList.add("d-show-");
-//     }
-//   });
-// });
+});
 
 // Toggle navebar
 
@@ -732,15 +514,20 @@ let collapse = document.querySelector(".navbar-collapse");
 
 // open navbar menu
 function openNavbar() {
-  nav_menu.style.marginTop = "0";
-  close_menu.style.display = "block";
-  open_menu.style.display = "none";
-  collapse.style.height = "83vh";
+  nav_menu.classList.add("mt_0");
+  close_menu.classList.add("d-block");
+  open_menu.classList.add = "d-none";
+  collapse.classList.add = "h_83";
 }
 // close navbar menu
 function closeNavbar() {
-  nav_menu.style.marginTop = "-1200px";
-  close_menu.style.display = "none";
-  open_menu.style.display = "block";
-  collapse.style.height = "unset";
+  nav_menu.classList.add("mt_0");
+  close_menu.classList.add("d-block");
+  open_menu.classList.add = "d-none";
+  collapse.classList.add = "h_83";
+
+  nav_menu.style.marginTop = "mt-1000";
+  close_menu.style.display = "d-none";
+  open_menu.style.display = "d-block";
+  collapse.style.height = "h_unset";
 }

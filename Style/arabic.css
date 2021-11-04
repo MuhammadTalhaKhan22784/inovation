@@ -1,76 +1,93 @@
-.nav_container,
-.footer {
+/* navbar */
+
+.rtl .nav_container,
+.rtl .footer {
   direction: rtl;
   font-family: "DroidArabicKufiRegular";
 }
 
-.nav-link,
-.form_btn {
-  text-align: right;
+.rtl .custom_navbar {
+  justify-content: flex-start;
 }
 
-.nav-link {
+.rtl .menu_toggle {
+  right: unset;
+  left: 36px;
+}
+
+.rtl .mb-logo {
+  margin-right: -58px;
+  margin-left: initial;
+}
+
+.rtl .desk-logo {
+  left: initial;
+  right: 20px;
+}
+
+.rtl .custom_navbar .nav-link,
+.rtl .form_btn {
+  text-align: right;
   font-size: 0.8rem;
 }
 
-.nav-item {
-  margin: 0 10px;
+.rtl .gear > span,
+.rtl .vs_box > p {
+  font-family: "DroidArabicKufiRegular";
 }
 
-.custom_navbar .nav-item p {
+.rtl .dropdown-menu h2 {
   text-align: right;
 }
 
-.dropdown-menu h2 {
-  text-align: right;
-}
-
-.h_arrow {
+.rtl .h_arrow {
   margin-right: -6px;
 }
 
-.dp::before {
-  right: -32px;
+.rtl .nav-item {
+  margin: 0 10px;
 }
 
-/* Banner */
-
-.vs_box h1,
-.vs_box p {
-  font-family: "DroidArabicKufiRegular";
+.rtl .rotate {
+  transform: rotate(-180deg);
 }
 
-.gear > span {
-  font-family: "DroidArabicKufiRegular";
-}
+/* Explore */
 
-#expchallange,
-#expinovation {
+.rtl .explore-text {
   justify-content: flex-end;
   flex-direction: row-reverse;
 }
 
-#pills-tab {
+/* news and upcomming */
+
+.rtl #pills-tab {
   direction: rtl;
 }
 
-#g2 {
+.rtl .test2::before {
+  right: -32px;
+}
+
+.rtl .dp::before {
+  right: -32px;
+}
+
+/* banner */
+
+.rtl #g2 {
   margin-right: 63px;
 }
 
-#g3 {
+.rtl #g3 {
   margin-right: 95px;
 }
 
 /* Top Button */
 
-#buttonTop {
+.rtl #buttonTop {
   left: 30px;
   right: inherit;
 }
 
-/* Explore Challenges */
-
-.rotate {
-  transform: rotate(-180deg);
-}
+/* Footer */
