@@ -105,332 +105,9 @@ window.onload = function () {
   });
 };
 
-// Change language
-
-const nav_id = document.getElementById("navbar");
-const cus_nav = document.getElementById("cus_nav");
-const menu_toggle = document.querySelectorAll(".menu_toggle");
-const nav_logo = document.querySelector(".mb-logo");
-const desk_logo = document.querySelector(".desk-logo");
-const footer = document.getElementById("footer");
-const pillsTab = document.getElementById("pills-tab");
-const buttonTop = document.getElementById("buttonTop");
-
-const rotate_arrow = document.querySelectorAll(".rotate");
-const gear2 = document.getElementById("g2");
-const gear3 = document.getElementById("g3");
-
-const n1 = document.getElementById("n1");
-const n2 = document.getElementById("n2");
-const n3 = document.getElementById("n3");
-const n4 = document.getElementById("n4");
-const n5 = document.getElementById("n5");
-const n6 = document.getElementById("n6");
-const n7 = document.getElementById("n7");
-const d1_1 = document.getElementById("d1-1");
-const d1_2 = document.getElementById("d1-2");
-const d1_3 = document.getElementById("d1-3");
-const d1_4 = document.getElementById("d1-4");
-
-const d2_1 = document.getElementById("d2-1");
-const d2_2 = document.getElementById("d2-2");
-const d2_3 = document.getElementById("d2-3");
-const d2_4 = document.getElementById("d2-4");
-const d2_5 = document.getElementById("d2-5");
-
-const d2_p1 = document.getElementById("d2p-1");
-const d2_p2 = document.getElementById("d2p-2");
-const d2_p3 = document.getElementById("d2p-3");
-const d2_p4 = document.getElementById("d2p-4");
-const d2_p5 = document.getElementById("d2p-5");
-const d2_p6 = document.getElementById("d2p-6");
-
-const d3_1 = document.getElementById("d3-1");
-const d3_2 = document.getElementById("d3-2");
-const d3_3 = document.getElementById("d3-3");
-const d3_4 = document.getElementById("d3-4");
-
-const d3p_1 = document.getElementById("d3p-1");
-const d3p_2 = document.getElementById("d3p-2");
-const d3p_3 = document.getElementById("d3p-3");
-const d3p_4 = document.getElementById("d3p-4");
-const d3p_5 = document.getElementById("d3p-5");
-
-const d4_1 = document.getElementById("d4_1");
-const d4_2 = document.getElementById("d4_2");
-const d4_3 = document.getElementById("d4_3");
-const d4_4 = document.getElementById("d4_4");
-
-const d5_1 = document.getElementById("d5_1");
-const d5_2 = document.getElementById("d5_2");
-const d5_3 = document.getElementById("d5_3");
-const d5_4 = document.getElementById("d5_4");
-const d5_5 = document.getElementById("d5_5");
-
-const h1 = document.getElementById("h1");
-const h2 = document.getElementById("h2");
-
-const copy_right = document.getElementById("copy_right");
-const terms_text = document.getElementById("terms_text");
-const privacy_text = document.getElementById("privacy_text");
-const cookie_text = document.getElementById("cookie_text");
-
-const ft_1 = document.getElementById("ft_1");
-const ft_2 = document.getElementById("ft_2");
-const ft_3 = document.getElementById("ft_3");
-const ft_4 = document.getElementById("ft_4");
-const ft_5 = document.getElementById("ft_5");
-const ft_6 = document.getElementById("ft_6");
-
-const ft2_1 = document.getElementById("ft2_1");
-const ft2_2 = document.getElementById("ft2_2");
-const ft2_3 = document.getElementById("ft2_3");
-const ft2_4 = document.getElementById("ft2_4");
-const ft2_5 = document.getElementById("ft2_5");
-const ft2_6 = document.getElementById("ft2_6");
-const ft2_7 = document.getElementById("ft2_7");
-const ft2_8 = document.getElementById("ft2_8");
-const ft2_9 = document.getElementById("ft2_9");
-
-const ft3_1 = document.getElementById("ft3_1");
-const ft3_2 = document.getElementById("ft3_2");
-const ft3_3 = document.getElementById("ft3_3");
-const ft3_4 = document.getElementById("ft3_4");
-const ft3_5 = document.getElementById("ft3_5");
-
-const news_letter = document.getElementById("news_letter");
-const n_update = document.getElementById("n_update");
-const subs = document.getElementById("subs");
-
-const exp1 = document.getElementById("expchallange");
-const exp2 = document.getElementById("expinovation");
-
-const ge1 = document.getElementById("ge1");
-const ge2 = document.getElementById("ge2");
-const ge3 = document.getElementById("ge3");
-const ge4 = document.getElementById("ge4");
-const ge5 = document.getElementById("ge5");
-
-const l_ino = document.getElementById("l_ino");
-const lc = document.getElementById("lc");
-
-const ei = document.getElementById("ei");
-const ec = document.getElementById("ec");
-
-const getLang = localStorage.getItem("lang");
-const engLng = document.getElementById("engLng");
-const arabicLng = document.getElementById("arabicLng");
-
-const h_arrow = document.querySelectorAll(".h_arrow");
-const nav_item = document.querySelectorAll(".nav-item");
-
-function HandleLanguage(e) {
-  const language = e ? e : "english";
-  localStorage.setItem("lang", language);
-  const getLang = localStorage.getItem("lang");
-
-  if (getLang === "urdu") {
-    engLng.classList.remove("d-none");
-    arabicLng.classList.add("d-none");
-    document.body.classList.add("rtl");
-
-    n1.innerHTML = "القائمة الرئيسية";
-    n2.innerHTML = "واحة التحديات ";
-    n3.innerHTML = "واحة الإبتكارات";
-    n4.innerHTML = "واحة الاستثمارات ";
-    n5.innerHTML = "كوِّن فريقك";
-    n6.innerHTML = "الفعاليات";
-    n7.innerHTML = "إنشاء حساب  / تسجيل دخول";
-
-    ge1.innerHTML = "الحكومة";
-    ge2.innerHTML = "المستثمرين";
-    ge3.innerHTML = "الشركات الناشئة";
-    ge4.innerHTML = "المبتكرين";
-    ge5.innerHTML = "القطاعات <br>األكاديمية";
-    d1_1.innerHTML = "سجل التحدي";
-    d1_2.innerHTML = "سجل حلول للتحديات";
-    d1_3.innerHTML = "سجل في هاكثون";
-    d1_4.innerHTML = "قصص نجاح";
-
-    d2_1.innerHTML = "المسرعات";
-    d2_2.innerHTML = "حاضنات";
-    d2_3.innerHTML = "الموجهين";
-    d2_4.innerHTML = "الدورات";
-    d2_5.innerHTML = "التعلم الإلكتروني";
-
-    d2_p1.innerHTML = "سجل في برامج التسريع";
-    d2_p2.innerHTML = "سجل في الحاضنات";
-    d2_p3.innerHTML = "إبحث عن الموجه";
-    d2_p4.innerHTML = "سجل كموجه";
-    d2_p5.innerHTML = "البحث عن البرامج التدريبية المناسبة لأهدافك";
-    d2_p6.innerHTML = "البحث عن الدورات";
-
-    d3_1.innerHTML = "المستثمرون";
-    d3_2.innerHTML = "الاستثمارات";
-    d3_3.innerHTML = "الشركات الناشئة";
-    d3_4.innerHTML = "التمويل";
-
-    d3p_1.innerHTML = "سجل كمستثمر";
-    d3p_2.innerHTML = "البحث عن فرص الاستثمار";
-    d3p_3.innerHTML = "ابحث عن أفضل الشركات الناشئة واستثمر فيها";
-    d3p_4.innerHTML = "تسجيل الشركات الناشئة الخاصة بك";
-    d3p_5.innerHTML = "تمويل المشاريع الإبتكارية";
-
-    d4_1.innerHTML = "سجل مهاراتك";
-    d4_2.innerHTML = "ابحث عن أفضل المواهب";
-    d4_3.innerHTML = "البحث عن أفضل الشركات الناشئة";
-    d4_4.innerHTML = "طلب مهارة";
-
-    d5_1.innerHTML = "أخبار";
-    d5_2.innerHTML = "الفعاليات القادمة ";
-    d5_3.innerHTML = "الفعاليات السابقة";
-    d5_4.innerHTML = "تواصل معنا مباشرة لعمل فعاليات خاصة ";
-    d5_5.innerHTML = "تواصل معنا مباشرة لحجز إجتماعات خاصة";
-
-    l_ino.innerHTML = "أحدث الإبتكارات";
-    lc.innerHTML = "أحدث التحديات";
-
-    ei.innerHTML = "إستعرض الإبتكارات";
-    ec.innerHTML = "إستعرض التحديات";
-
-    h1.innerHTML = "التعاون هو المفتاح لتسريع الابتكار";
-
-    h2.innerHTML =
-      "واحات الابتكار الرقمية تربط الشركات الناشئة بالقطاع الحكومي والخاص لتحويل الأفكار إلى منتجات أو خدمات";
-    copy_right.innerHTML = "واحات الإبتكار جميع الحقوق محفوظة";
-    terms_text.innerHTML = "الشروط والأحكام";
-    privacy_text.innerHTML = "سياسة الخصوصية";
-    cookie_text.innerHTML = "سياسة ملفات تعريف الارتباط";
-    ft_1.innerHTML = "نبذة عنا";
-    ft_2.innerHTML = "نبدة عن واحات اإلبتكار";
-    ft_3.innerHTML = "خدماتنا";
-    ft_4.innerHTML = "فريق العمل";
-    ft_5.innerHTML = "شركائنا";
-    ft_6.innerHTML = "الأسئلة الشائعة";
-
-    ft2_1.innerHTML = "روابط سريعة";
-
-    ft2_2.innerHTML = "تحديات";
-    ft2_3.innerHTML = "الابتكارات";
-    ft2_4.innerHTML = "التمويل";
-    ft2_5.innerHTML = "التدريب";
-    ft2_6.innerHTML = "التوجيه";
-    ft2_7.innerHTML = "برامج تسريع";
-    ft2_8.innerHTML = "المهارات";
-    ft2_9.innerHTML = "أدوات اإلبتكار";
-    ft3_1.innerHTML = "الفعاليات";
-    ft3_2.innerHTML = "القادمة";
-    ft3_3.innerHTML = "السابقة";
-    ft3_4.innerHTML = "هاكثون";
-    ft3_5.innerHTML = "المسابقات";
-
-    news_letter.innerHTML = "اشترك في نشرتنا اإلخبارية";
-    n_update.innerHTML = "ابق على اطالع بأحدث األخبار والفعاليات والمزيد";
-    subs.innerHTML = "اإلشتراك";
-  } else {
-    engLng.classList.add("d-none");
-    arabicLng.classList.remove("d-none");
-    document.body.classList.remove("rtl");
-
-    n1.innerHTML = "Home";
-    n2.innerHTML = "Challenges Oasis";
-    n3.innerHTML = "Innovations Oasis";
-    n4.innerHTML = "Investments Oasis";
-    n5.innerHTML = "Build your team";
-    n6.innerHTML = "Events";
-    n7.innerHTML = "Register / Login";
-
-    ge1.innerHTML = "Government";
-    ge2.innerHTML = "Investors";
-    ge3.innerHTML = "Startups";
-    ge4.innerHTML = "Innovators";
-    ge5.innerHTML = "Academic <br> sectors";
-
-    d1_1.innerHTML = "Post challenges";
-    d1_2.innerHTML = "Solve challenges";
-    d1_3.innerHTML = "Join Hackathon";
-    d1_4.innerHTML = "Success story";
-
-    d2_1.innerHTML = "Accelerators";
-    d2_2.innerHTML = "Incubators";
-    d2_3.innerHTML = "Mentors";
-    d2_4.innerHTML = "Training";
-    d2_5.innerHTML = "E-learning";
-
-    d2_p1.innerHTML = "Register for Acceleration Programs";
-    d2_p2.innerHTML = "Register for incubators";
-    d2_p3.innerHTML = "Find Mentors";
-    d2_p4.innerHTML = "Register as a mentor";
-    d2_p5.innerHTML = "Find training Programs";
-    d2_p6.innerHTML = "Find courses";
-
-    d3_1.innerHTML = "Investors";
-    d3_2.innerHTML = "Investments";
-    d3_3.innerHTML = "Start-ups";
-    d3_4.innerHTML = "Funding";
-
-    d3p_1.innerHTML = "Register as investors";
-    d3p_2.innerHTML = "Search for investment opportunities";
-    d3p_3.innerHTML = "Find & Invest on the best start-ups";
-    d3p_4.innerHTML = "Register your start-ups";
-    d3p_5.innerHTML = "Funding to bring creative project to life";
-
-    d4_1.innerHTML = "Talent register";
-    d4_2.innerHTML = "Find top talent";
-    d4_3.innerHTML = "Find top startups";
-    d4_4.innerHTML = "Request talents";
-
-    d5_1.innerHTML = "News";
-    d5_2.innerHTML = "Upcoming event";
-    d5_3.innerHTML = "Past event";
-    d5_4.innerHTML = "Customized Events Contact Us Directly";
-    d5_5.innerHTML = "Customized Meetings Contact Us Directly";
-
-    h1.innerHTML = "Collaboration is the key to speeding up innovation";
-    h2.innerHTML =
-      "The Digital Innovation Oases connects startups with public and private sectors to transform ideas to products or services";
-
-    lc.innerHTML = "Latest challenges";
-    l_ino.innerHTML = "Latest Innovations";
-
-    ei.innerHTML = "Explore Innovation";
-    ec.innerHTML = "Explore Challenges";
-
-    copy_right.innerHTML = "Innovation Oases All Rights Are Reserved @ 2021";
-    terms_text.innerHTML = "Term & condition";
-    privacy_text.innerHTML = "Privacy";
-    cookie_text.innerHTML = "Cookie Policy";
-    ft_1.innerHTML = "About us";
-    ft_2.innerHTML = "About IOs";
-    ft_3.innerHTML = "Our services";
-    ft_4.innerHTML = "Teams";
-    ft_5.innerHTML = "Partners";
-    ft_6.innerHTML = "FAQ";
-
-    ft2_1.innerHTML = "Quick Links";
-    ft2_2.innerHTML = "Challenges";
-    ft2_3.innerHTML = "Innovations";
-    ft2_4.innerHTML = "Funding";
-    ft2_5.innerHTML = "Training";
-    ft2_6.innerHTML = "Mentors";
-    ft2_7.innerHTML = "Accelerator";
-    ft2_8.innerHTML = "Talents";
-    ft2_9.innerHTML = "Innovation Tools";
-
-    ft3_1.innerHTML = "Events";
-    ft3_2.innerHTML = "Coming";
-    ft3_3.innerHTML = "Past";
-    ft3_4.innerHTML = "Hackathons";
-    ft3_5.innerHTML = "Awards";
-
-    news_letter.innerHTML = "Subscribe to our NewsLetter";
-    n_update.innerHTML = "Stay updated with our latest news, events and more.";
-    subs.innerHTML = "Subscribe";
-  }
-}
-HandleLanguage(getLang);
-
 // Top Button JS
+
+const buttonTop = document.getElementById("buttonTop");
 var btn = $("#buttonTop");
 
 $(window).scroll(function () {
@@ -447,6 +124,7 @@ btn.on("click", function (e) {
 });
 
 // Toggle Dropdown JS
+
 let navItemToggle = document.querySelectorAll(".n_menu");
 let nav_link = document.querySelectorAll(".dropdown-menu");
 let nav_s = document.querySelectorAll(".toggle_c");
@@ -491,19 +169,18 @@ let close_menu = document.getElementById("close_menu");
 let collapse = document.querySelector(".navbar-collapse");
 
 // open navbar menu
+
 function openNavbar() {
   nav_menu.classList.add("mt_0");
   close_menu.classList.add("d_block");
   open_menu.classList.add("d_none");
   collapse.classList.add("h_83");
 }
+
 // close navbar menu
 function closeNavbar() {
   nav_menu.classList.remove("mt_0");
-
   close_menu.classList.remove("d_block");
-
   open_menu.classList.remove("d_none");
-
   collapse.classList.remove("h_83");
 }

@@ -229,15 +229,11 @@ p {
   right: 20px;
 }
 
-/* 
-.desk-lang {
-  display: block;
-} */
-
 .custom_navbar .nav-item p {
   font-size: 0.8rem;
   margin: 2px 5px;
   position: relative;
+  text-align: right;
 }
 
 .custom_navbar .nav-item p::before {
@@ -307,7 +303,6 @@ p {
   height: max-content;
   padding: 2rem 0;
   background-color: #f2f4f8;
-  /* transition: all 0.9s ease-out; */
 }
 
 .co_dropdwn h2 {
@@ -328,19 +323,6 @@ p {
   width: 25px;
   margin: 0 10px;
 }
-
-/* .d-block {
-  display: none !important;
-} */
-
-/* .nav-item:hover .search_dropdwn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-} */
 
 .lang-btn {
   background: transparent;
@@ -417,11 +399,6 @@ p {
   font-size: 1rem;
   text-align: right;
 }
-
-/* 
-.nav-item:hover .dropdown-menu {
-  display: block !important;
-} */
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
@@ -2267,7 +2244,6 @@ p {
   .h_logo {
     width: 87px;
     height: 87px;
-    /* margin-left: -60px; */
   }
   .custom_navbar .mb-search {
     width: unset !important;
