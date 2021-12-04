@@ -1587,7 +1587,6 @@
 
     <script>
         var swiper1 = new Swiper(".partners-container", {
-            loop: false,
 
             slidesPerView: 3,
             paginationClickable: true,
@@ -1627,9 +1626,18 @@
                 },
             },
             autoplay: {
-                delay: 2000,
+                delay: 1,
+                reverseDirection: false,
+                disableOnInteraction: false,
             },
-            loop: false,
+            mousewheelControl:true,
+
+            freeMode: true,
+            // autoplayDisableOnInteraction: false,
+            speed: 7000,
+            // disable
+            loop: true,
+
         });
     </script>
 
