@@ -484,9 +484,13 @@
                 </div>
 
                 <div class="vsb_2">
-                    <img src="Assets/Images/logo (5).png" alt="..." />
+                    <img src="Assets/Images/logo (5) (1).png" alt="..." />
                 </div>
-                <img class="vs_video" src="Assets/video/Final.gif" alt="..." />
+                <div id="gear_video">
+                    <img class="vs_video" id="gearPoster" src="Assets/Images/gear_video_img.PNG" alt="...">
+                    <!-- <img class="vs_video" id="gearPoster" src="Assets/Images/gear_video_img.PNG" alt="..."> -->
+                    <!-- <img class="vs_video d-none" id="gearVideo" src="Assets/video/Final.gif" alt="..." /> -->
+                </div>
             </div>
 
             <p id="h2">
@@ -1484,6 +1488,29 @@
     <!-- Swiper JS -->
     <script src="Assets/swiper-bundle.min.js"></script>
 
+
+    <script>
+        var gear_video = document.getElementById("gear_video");
+        var gearPoster = document.getElementById("gearPoster");
+        var img1 = document.createElement("img");
+        img1.src = "Assets/video/Final.gif"
+        img1.classList.add('d-none', 'vs_video')
+        gear_video.append(img1)
+
+        img1.onload = function () {
+            img1.classList.remove('d-none');
+            gearPoster.remove()
+            // gearPoster.classList.add('d-none');
+        };
+        // var gearVideo = document.getElementById("gearVideo");
+        // var gearPoster = document.getElementById("gearPoster");
+        // gearVideo.onload = function () {
+        //     gearPoster.classList.add("d-none")
+        //     gearVideo.classList.remove("d-none")
+        //     console.log("m chal raha hu...")
+        // }
+    </script>
+
     <script>
         var Swiper2 = new Swiper(".upcoming-container1", {
             loop: true,
@@ -1630,7 +1657,7 @@
                 reverseDirection: false,
                 disableOnInteraction: false,
             },
-            mousewheelControl:true,
+            mousewheelControl: true,
 
             freeMode: true,
             // autoplayDisableOnInteraction: false,
