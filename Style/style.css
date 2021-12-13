@@ -315,6 +315,21 @@ p {
   background-color: #f2f4f8;
 }
 
+.context_menu {
+  width: max-content;
+  left: unset;
+  height: max-content;
+  padding: 10px;
+}
+
+.context_menu h5 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .co_dropdwn h2 {
   font-size: 1rem;
   line-height: 1.4;
@@ -944,11 +959,9 @@ p {
   text-overflow: ellipsis;
 }
 
-
 .lc_6 span {
   color: #4f96d8;
   max-width: 100px;
-
 }
 
 .lc_6 i {
@@ -2963,5 +2976,11 @@ p {
   .vsb_3 > div:nth-child(5) {
     top: 14px;
     left: 490px;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .footer_body_content_list a {
+    font-size: 0.7rem;
   }
 }
